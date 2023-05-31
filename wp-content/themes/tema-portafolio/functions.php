@@ -53,13 +53,6 @@
             )
         );
 
-    # Register Menu
-    add_action('init','register_menus');
-    function register_menus() {
-        register_nav_menus( array(
-            'main-menu' => __('Menu Principal', 'RSAAW'),
-        ));
-    }
     # URL Template
     function theme_url() {
         echo get_template_directory_uri();
@@ -111,8 +104,8 @@
     function load_css_frames() {
         //NORMALIZE  CSS
         wp_enqueue_style('normalize-css',get_template_directory_uri() . "/assets/styles/css/normalize.css", array(), '', '');
-        //Foundation CSS
-        wp_enqueue_style('foundation-css',get_template_directory_uri() . "/assets/styles/css/foundation.min.css", array(), '', '');
+        //Bootstrap
+        wp_enqueue_style('bootstrap-css', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css", array(), '', '');
         //hamburguer css
         wp_enqueue_style('hamburgers',get_template_directory_uri() . "/assets/styles/css/hamburgers.min.css", array(), '', '');
         //Swiper css
@@ -127,12 +120,10 @@
         wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), '', '');
         wp_enqueue_script('jquery-validate', get_template_directory_uri() . '/assets/js/jquery.validate.min.js', array(), '', 'jquery' );
         wp_enqueue_script('additional-methods', get_template_directory_uri() . '/assets/js/additional-methods.js', array(), '', 'jquery' );
-        //What Input
-        wp_enqueue_script('What-input', get_template_directory_uri() . '/assets/js/what-input.js', array(), '', '' );
         //Pagination js
         wp_enqueue_script('Pagination', get_template_directory_uri() . '/assets/js/jPages.js', array(), '', 'jquery' );
-        //Foundation JS
-        wp_enqueue_script('Framework', get_template_directory_uri() . '/assets/js/foundation.min.js', array(), '', 'jquery' );
+        //Bootstrap JS
+        wp_enqueue_script('Bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', array(), '', 'jquery' );
         //Swiper JS
         wp_enqueue_script('Swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array(), '', 'jquery' );
         // GREENSOCK

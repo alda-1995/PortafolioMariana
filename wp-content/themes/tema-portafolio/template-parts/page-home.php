@@ -7,14 +7,14 @@
 <?php get_header(); ?>
 <!-- bloque banner -->
 <?php
-// $bloqueBanner = get_field('bloque_banner');
-// smk_get_template_part(
-//   'template-parts/components/bloque-banner.php',
-//   array(
-//     'gallery' => $bloqueBanner['gallery'],
-//     'supertitle' => $bloqueBanner['supertitle'],
-//     'title' => $bloqueBanner['title']
-//   )
-// );
+$bloqueBanner = get_field('bloque_principal');
+smk_get_template_part(
+  'template-parts/components/bloque-banner.php',
+  array(
+    'img' => $bloqueBanner['imagen'],
+    'titulo' => $bloqueBanner['titulo'],
+    'texto' => $bloqueBanner['texto']
+  )
+);
 ?>
 <?php get_footer(); ?>

@@ -1,14 +1,18 @@
-@charset "UTF-8";
 /* Admin Menu Editor CSS file */
 .ame-input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .ame-input-group .ame-input-group-secondary, .ame-input-group > :not(:first-child) {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .ame-input-group > :not(:last-child) {
   margin-right: 0;
   border-top-right-radius: 0;
@@ -29,7 +33,8 @@
   float: left;
   display: block;
   border: 1px solid #ccd0d4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
   background-color: #FFFFFF;
   border-radius: 0px;
   -moz-border-radius: 0px;
@@ -49,7 +54,8 @@
 
 .ws_dropzone {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 2px 6px;
   border: 3px none #b4b9be;
   height: 31px;
@@ -70,17 +76,18 @@
                      Actor UI
  *************************************************/
 #ws_actor_selector li:after {
-  content: "| ";
+  content: '| ';
 }
 
 #ws_actor_selector li:last-child:after {
-  content: "";
+  content: '';
 }
 
 #ws_actor_selector li a {
   display: inline-block;
   text-align: center;
 }
+
 #ws_actor_selector li a::before {
   display: block;
   content: attr(data-text);
@@ -99,15 +106,16 @@
  * The checkbox that lets the user show/hide a menu for the currently selected actor.
  */
 #ws_menu_editor .ws_actor_access_checkbox,
-#ws_menu_editor input[type=checkbox].ws_actor_access_checkbox {
+#ws_menu_editor input[type="checkbox"].ws_actor_access_checkbox {
   margin-right: 2px;
   margin-left: 2px;
   margin-top: 1px;
   vertical-align: text-top;
 }
+
 #ws_menu_editor .ws_actor_access_checkbox:indeterminate:before,
-#ws_menu_editor input[type=checkbox].ws_actor_access_checkbox:indeterminate:before {
-  content: "■";
+#ws_menu_editor input[type="checkbox"].ws_actor_access_checkbox:indeterminate:before {
+  content: '\25a0';
   color: #1e8cbe;
   margin: -3px 0 0 -1px;
   font: 400 14px/1 dashicons;
@@ -117,9 +125,10 @@
   width: 16px;
   -webkit-font-smoothing: antialiased;
 }
+
 @media screen and (max-width: 782px) {
   #ws_menu_editor .ws_actor_access_checkbox:indeterminate:before,
-#ws_menu_editor input[type=checkbox].ws_actor_access_checkbox:indeterminate:before {
+  #ws_menu_editor input[type="checkbox"].ws_actor_access_checkbox:indeterminate:before {
     height: 1.5625rem;
     width: 1.5625rem;
     line-height: 1.5625rem;
@@ -131,11 +140,12 @@
 }
 
 @media screen and (max-width: 782px) {
-  #ws_menu_editor input[type=checkbox].ws_actor_access_checkbox:indeterminate:before {
+  #ws_menu_editor input[type="checkbox"].ws_actor_access_checkbox:indeterminate:before {
     margin: -6px 0 0 1px;
     font: 400 26px/1 dashicons;
   }
 }
+
 /* The checkbox is only visible when viewing the menu configuration for a specific actor. */
 #ws_menu_editor .ws_actor_access_checkbox {
   display: none;
@@ -200,6 +210,7 @@
   padding: 3px;
   margin: 2px 0 2px 6px;
 }
+
 body.rtl .ws_container {
   margin-right: 6px;
   margin-left: 0;
@@ -325,6 +336,7 @@ body.rtl .ws_container {
   margin-bottom: 6px;
   min-height: 45px;
 }
+
 .ws_edit_field:after {
   visibility: hidden;
   display: block;
@@ -355,6 +367,7 @@ body.rtl .ws_container {
   background: #ccc;
   margin: 8px -4px 5px;
 }
+
 .ws_edit_field.ws_field_group_heading span {
   display: none;
   font-weight: bold;
@@ -373,6 +386,7 @@ body.rtl .ws_container {
   vertical-align: top;
   background: url("../images/pencil_delete_gray.png") no-repeat center;
 }
+
 .ame-is-wp53-plus .ws_reset_button {
   margin-top: 5px;
 }
@@ -394,7 +408,7 @@ body.rtl .ws_container {
 }
 
 /* The input box in each field editor */
-#ws_menu_editor .ws_editbox input[type=text],
+#ws_menu_editor .ws_editbox input[type="text"],
 #ws_menu_editor .ws_editbox select {
   display: block;
   float: left;
@@ -405,8 +419,9 @@ body.rtl .ws_container {
   padding-top: 3px;
   padding-bottom: 3px;
 }
-.ame-is-wp53-plus #ws_menu_editor .ws_editbox input[type=text],
-.ame-is-wp53-plus #ws_menu_editor .ws_editbox select {
+
+.ame-is-wp53-plus #ws_menu_editor .ws_editbox input[type="text"], .ame-is-wp53-plus
+#ws_menu_editor .ws_editbox select {
   height: 28px;
   margin-top: 1px;
 }
@@ -416,21 +431,23 @@ body.rtl .ws_container {
   float: left;
 }
 
-#ws_menu_editor .ws_edit_field-custom input[type=checkbox] {
+#ws_menu_editor .ws_edit_field-custom input[type="checkbox"] {
   margin-top: 0;
 }
 
-#ws_menu_editor input[type=text].ws_field_value {
+#ws_menu_editor input[type="text"].ws_field_value {
   min-height: 25px;
 }
-.ame-is-wp53-plus #ws_menu_editor input[type=text].ws_field_value {
+
+.ame-is-wp53-plus #ws_menu_editor input[type="text"].ws_field_value {
   min-height: 28px;
 }
 
 /* Dropdown button for combo-box fields */
 #ws_menu_editor .ws_dropdown_button,
 #ws_menu_access_editor .ws_dropdown_button {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 25px;
   height: 25px;
   min-height: 25px;
@@ -441,7 +458,8 @@ body.rtl .ws_container {
   font-size: 16px !important;
   line-height: 25px;
   border-color: #dfdfdf;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-left-radius: 0;
@@ -458,6 +476,7 @@ body.rtl .ws_container {
   line-height: 24px;
   color: #555;
 }
+
 .ame-is-wp53-plus #ws_menu_editor .ws_dropdown_button:hover,
 #ws_menu_access_editor.ame-is-wp53-plus .ws_dropdown_button:hover {
   color: #23282d;
@@ -491,7 +510,8 @@ to accommodate the drop-down button.
 
 #ws_menu_access_editor input.ws_has_dropdown {
   width: 90%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 27px;
   margin-top: 1px;
 }
@@ -568,7 +588,7 @@ to accommodate the drop-down button.
 
 /* items with custom permissions for the selected actor */
 .ws_custom_actor_permissions_flag {
-  font: 16px/1 "dashicons";
+  font: 16px/1 'dashicons';
 }
 
 .ws_custom_actor_permissions_flag::before {
@@ -589,7 +609,7 @@ to accommodate the drop-down button.
 
 /* Item visibility can't be determined because it depends on a meta capability. */
 .ws_uncertain_meta_cap_flag::before {
-  font: 16px/1 "dashicons";
+  font: 16px/1 'dashicons';
   content: "\f348";
   color: black;
   filter: alpha(opacity=25);
@@ -604,7 +624,6 @@ to accommodate the drop-down button.
 .ws_toolbar {
   display: block;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   padding: 6px 6px 0 6px;
@@ -617,7 +636,6 @@ to accommodate the drop-down button.
   padding: 4px;
   float: left;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   width: 16px;
   height: 16px;
@@ -625,6 +643,7 @@ to accommodate the drop-down button.
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
+
 .ws_button img {
   vertical-align: top;
 }
@@ -667,12 +686,12 @@ select.ws_dropdown {
   z-index: 1002;
   position: absolute;
   display: none;
-  font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+  font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
   font-size: 12px;
 }
 
 select.ws_dropdown option {
-  font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+  font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
   font-size: 12px;
   padding: 3px;
 }
@@ -691,6 +710,7 @@ select.ws_dropdown optgroup option {
   padding: 0;
   margin: 0 0 0 6px;
 }
+
 .ws_tool_tab_nav li {
   display: inline-block;
   border: 1px solid transparent;
@@ -699,14 +719,17 @@ select.ws_dropdown optgroup option {
   line-height: 1.35em;
   margin-bottom: 0;
 }
+
 .ws_tool_tab_nav li.ui-tabs-active {
   border-color: #dfdfdf;
   border-bottom-color: #FDFDFD;
   background: #FDFDFD none;
 }
+
 .ws_tool_tab_nav a {
   text-decoration: none;
 }
+
 .ws_tool_tab_nav li.ui-tabs-active a {
   color: #32373C;
 }
@@ -751,9 +774,6 @@ select.ws_dropdown optgroup option {
   /* Gradients and colours cribbed from WP 3.5.1 button styles */
   background: #f3f3f3;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f4f4f4));
-  background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4);
-  background-image: -moz-linear-gradient(top, #fefefe, #f4f4f4);
-  background-image: -o-linear-gradient(top, #fefefe, #f4f4f4);
   background-image: linear-gradient(to bottom, #fefefe, #f4f4f4);
 }
 
@@ -762,10 +782,6 @@ select.ws_dropdown optgroup option {
   border-color: #999;
   background: #f3f3f3;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f3f3));
-  background-image: -webkit-linear-gradient(top, #fff, #f3f3f3);
-  background-image: -moz-linear-gradient(top, #fff, #f3f3f3);
-  background-image: -ms-linear-gradient(top, #fff, #f3f3f3);
-  background-image: -o-linear-gradient(top, #fff, #f3f3f3);
   background-image: linear-gradient(to bottom, #fff, #f3f3f3);
 }
 
@@ -780,6 +796,7 @@ select.ws_dropdown optgroup option {
   margin: 0;
   padding: 0;
 }
+
 #ws_icon_selector .ws_icon_option .ws_icon_image:before {
   color: #85888c;
   display: inline-block;
@@ -809,10 +826,12 @@ select.ws_dropdown optgroup option {
   margin: 0;
   padding: 0;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 25px;
   min-height: 25px;
 }
+
 .ame-is-wp53-plus #ws_menu_editor .ws_select_icon {
   height: 28px;
   min-height: 28px;
@@ -823,9 +842,11 @@ select.ws_dropdown optgroup option {
   color: #85888c;
   padding: 3px;
 }
+
 .ws_select_icon .ws_icon_image.dashicons {
   padding: 3px 2px;
 }
+
 .ws_select_icon .ws_icon_image.dashicons:before {
   width: 20px;
 }
@@ -843,9 +864,11 @@ select.ws_dropdown optgroup option {
   margin-top: 2px;
   position: relative;
 }
+
 #ws_icon_selector .ws_tool_tab_nav li {
   padding: 4px 10px 11px;
 }
+
 #ws_icon_selector .ws_tool_tab {
   padding: 4px 4px 2px;
   max-height: 324px;
@@ -865,7 +888,8 @@ select.ws_dropdown optgroup option {
   border: 1px solid silver;
   border-radius: 3px;
   background-color: white;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
 }
 
@@ -917,7 +941,8 @@ select.ws_dropdown optgroup option {
 }
 
 #ws_embedded_page_selector input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 100%;
 }
 
@@ -939,7 +964,8 @@ select.ws_dropdown optgroup option {
 /* Color scheme display in the editor widget. */
 .ws_color_scheme_display {
   display: inline-block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 26px;
   width: 190px;
   margin-right: 5px;
@@ -951,6 +977,7 @@ select.ws_dropdown optgroup option {
   cursor: pointer;
   line-height: 20px;
 }
+
 .ame-is-wp53-plus .ws_color_scheme_display {
   border-color: #7e8993;
   border-radius: 4px;
@@ -992,8 +1019,8 @@ select.ws_dropdown optgroup option {
   top: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.7;
-  -moz-opacity: 0.7;
+  opacity: 0.70;
+  -moz-opacity: 0.70;
   filter: alpha(opacity=70);
   width: 100%;
   height: 100%;
@@ -1007,26 +1034,27 @@ select.ws_dropdown optgroup option {
   background: white;
   border: 1px solid #c0c0c0;
   padding: 0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+
 .settings_page_menu_editor .ui-dialog .ui-dialog-content {
   padding: 8px 8px 8px 8px;
   font-size: 1.1em;
 }
+
 .settings_page_menu_editor .ui-dialog .ame-scrollable-dialog-content {
   max-height: 500px;
   overflow-y: auto;
   padding-top: 0.5em;
 }
+
 .settings_page_menu_editor .ui-dialog-titlebar {
   display: block;
   height: 22px;
   margin: 0;
   padding: 4px 4px 4px 8px;
   background-color: #86A7E3;
-  font-size: 1em;
+  font-size: 1.0em;
   line-height: 22px;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
@@ -1036,10 +1064,12 @@ select.ws_dropdown optgroup option {
   border-top-right-radius: 4px;
   border-bottom: 1px solid #809fd9;
 }
+
 .settings_page_menu_editor .ui-dialog-title {
   color: white;
   font-weight: bold;
 }
+
 .settings_page_menu_editor .ui-button.ui-dialog-titlebar-close {
   background: #86A7E3 url(../images/x.png) no-repeat center;
   width: 22px;
@@ -1051,10 +1081,12 @@ select.ws_dropdown optgroup option {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
+
 .settings_page_menu_editor .ui-dialog-titlebar-close:hover {
   /*background-image: url(../images/x-light.png);*/
   background-color: #a6c2f5;
 }
+
 #export_dialog .ws_dialog_panel {
   height: 50px;
 }
@@ -1067,29 +1099,39 @@ select.ws_dropdown optgroup option {
   display: inline-block;
   min-width: 6em;
 }
+
 .ws_dialog_panel .ame-inline-select-with-input {
   vertical-align: baseline;
 }
+
 .ws_dialog_panel .ame-box-side-sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 800px;
 }
+
 .ws_dialog_panel .ame-box-side-sizes .ame-fixed-label-text {
   min-width: 4em;
 }
+
 .ws_dialog_panel .ame-box-side-sizes label {
   margin-right: 2.5em;
 }
+
 .ws_dialog_panel .ame-box-side-sizes input {
   margin-bottom: 0.4em;
 }
+
 .ws_dialog_panel .ame-box-side-sizes input[type=number] {
   width: 6em;
 }
 
 .ame-flexbox-break {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   height: 0;
 }
 
@@ -1175,6 +1217,7 @@ select.ws_dropdown optgroup option {
 .ws_dialog_subpanel {
   margin-bottom: 1em;
 }
+
 .ws_dialog_subpanel fieldset p {
   margin-top: 0;
   margin-bottom: 4px;
@@ -1205,7 +1248,7 @@ select.ws_dropdown optgroup option {
 
 #ws_role_table_body_container {
   /*max-height: 400px;
-  overflow: auto;*/
+	overflow: auto;*/
   overflow: hidden;
   margin-right: -1px;
 }
@@ -1292,30 +1335,39 @@ select.ws_dropdown optgroup option {
 .ws_has_extended_permissions {
   /* The role or actor whose CPT/taxonomy permissions are currently expanded. */
 }
+
 .ws_has_extended_permissions .ws_role_table_body .ws_column_role {
   cursor: pointer;
 }
+
 .ws_has_extended_permissions .ws_role_table_body .ws_column_selected_role_tip {
   display: table-cell;
 }
+
 .ws_has_extended_permissions .ws_role_table_body tr:hover {
   background: #EAF2FA;
 }
+
 .ws_has_extended_permissions .ws_role_table_body td {
   border-top: 1px solid #f1f1f1;
 }
+
 .ws_has_extended_permissions .ws_role_table_body tr:first-child td {
   border-top-width: 0;
 }
+
 .ws_has_extended_permissions .ws_role_table_body tr.ws_cpt_selected_role {
   background-color: #dddddd;
 }
+
 .ws_has_extended_permissions .ws_role_table_body tr.ws_cpt_selected_role .ws_column_role {
   font-weight: bold;
 }
+
 .ws_has_extended_permissions .ws_role_table_body tr.ws_cpt_selected_role .ws_cpt_selected_role_tip {
   visibility: visible;
 }
+
 .ws_has_extended_permissions .ws_role_table_body tr.ws_cpt_selected_role td {
   color: #222;
 }
@@ -1336,25 +1388,31 @@ select.ws_dropdown optgroup option {
 #ws_ext_permissions_container .ws_ext_permissions_table {
   margin-top: 2px;
 }
+
 #ws_ext_permissions_container .ws_ext_permissions_table tr td:first-child {
   padding-left: 15px;
 }
+
 #ws_ext_permissions_container .ws_ext_permissions_table .ws_ext_group_title {
   padding-bottom: 0;
   font-weight: bold;
 }
+
 #ws_ext_permissions_container .ws_ext_permissions_table .ws_ext_action_check_column,
 #ws_ext_permissions_container .ws_ext_permissions_table .ws_ext_action_name_column {
   padding-top: 3px;
   padding-bottom: 3px;
 }
+
 #ws_ext_permissions_container .ws_ext_permissions_table tr.ws_ext_padding_row td {
   padding: 0 0 0 0;
   height: 1px;
 }
+
 #ws_ext_permissions_container .ws_ext_permissions_table .ws_same_as_required_cap {
   text-decoration: underline;
 }
+
 #ws_ext_permissions_container .ws_ext_permissions_table .ws_ext_has_custom_setting label.ws_ext_action_name::after {
   content: " *";
 }
@@ -1365,18 +1423,23 @@ select.ws_dropdown optgroup option {
   right: 0;
   color: #0073aa;
 }
+
 #ws_ext_permissions_container.ws_ext_readable_names_enabled #ws_ext_toggle_capability_names {
   color: #b4b9be;
 }
+
 #ws_ext_permissions_container .ws_ext_readable_name {
   display: none;
 }
+
 #ws_ext_permissions_container .ws_ext_capability {
   display: inline;
 }
+
 #ws_ext_permissions_container.ws_ext_readable_names_enabled .ws_ext_readable_name {
   display: inline;
 }
+
 #ws_ext_permissions_container.ws_ext_readable_names_enabled .ws_ext_capability {
   display: none;
 }
@@ -1389,14 +1452,17 @@ select.ws_dropdown optgroup option {
 .ws_cpt_selected_role_tip {
   display: block;
   visibility: hidden;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 26px;
   height: 26px;
   position: absolute;
   right: 0;
   background: white;
-  transform: translate(1px, 0) rotate(-45deg);
-  transform-origin: top right;
+  -webkit-transform: translate(1px, 0) rotate(-45deg);
+          transform: translate(1px, 0) rotate(-45deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
 }
 
 .ws_role_table_body .ws_column_selected_role_tip {
@@ -1439,12 +1505,12 @@ select.ws_dropdown optgroup option {
 #ws_user_selection_panels {
   min-width: 710px;
 }
+
 #ws_user_selection_panels .ws_user_selection_panel {
   display: block;
   float: left;
   position: relative;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 350px;
   height: 400px;
@@ -1452,16 +1518,18 @@ select.ws_dropdown optgroup option {
   margin-right: 10px;
   padding: 10px;
 }
+
 #ws_user_selection_panels #ws_user_selection_target_panel {
   margin-right: 0;
 }
+
 #ws_user_selection_panels #ws_available_user_query {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   max-height: 28px;
 }
+
 #ws_user_selection_panels .ws_user_list_wrapper {
   position: absolute;
   top: 50px;
@@ -1471,53 +1539,66 @@ select.ws_dropdown optgroup option {
   overflow-x: auto;
   overflow-y: auto;
 }
+
 #ws_user_selection_panels .ws_user_selection_list {
   min-height: 20px;
   border-width: 0;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
+
 #ws_user_selection_panels .ws_user_selection_list .ws_user_action_column {
   width: 20px;
   text-align: center;
   padding-top: 9px;
   padding-bottom: 0;
 }
+
 #ws_user_selection_panels .ws_user_selection_list .ws_user_action_button {
   cursor: pointer;
   color: #b4b9be;
 }
+
 #ws_user_selection_panels .ws_user_selection_list .ws_user_username_column {
   padding-left: 0;
 }
+
 #ws_user_selection_panels .ws_user_selection_list .ws_user_display_name_column {
   white-space: nowrap;
 }
+
 #ws_user_selection_panels #ws_available_users tr {
   cursor: pointer;
 }
+
 #ws_user_selection_panels #ws_available_users tr:hover, #ws_user_selection_panels #ws_available_users tr.ws_user_best_match {
   background-color: #eaf2fa;
 }
+
 #ws_user_selection_panels #ws_available_users tr:hover .ws_user_action_button {
   color: #7ad03a;
 }
+
 #ws_user_selection_panels #ws_selected_users .ws_user_action_button::before {
   content: "\f158";
 }
+
 #ws_user_selection_panels #ws_selected_users .ws_user_action_button:hover {
   color: #dd3d36;
 }
+
 #ws_user_selection_panels #ws_selected_users .ws_user_action_column {
   padding-left: 6px;
 }
+
 #ws_user_selection_panels #ws_selected_users .ws_user_display_name_column {
   display: none;
 }
+
 #ws_user_selection_panels #ws_selected_users tr.ws_user_must_be_selected .ws_user_action_button {
   display: none;
 }
+
 #ws_user_selection_panels #ws_selected_users_caption {
   font-size: 14px;
   line-height: 1.4em;
@@ -1525,11 +1606,12 @@ select.ws_dropdown optgroup option {
   color: #555;
   font-weight: 600;
 }
+
 #ws_user_selection_panels::after {
   display: block;
   height: 1px;
   visibility: hidden;
-  content: " ";
+  content: ' ';
   clear: both;
 }
 
@@ -1640,24 +1722,28 @@ select.ws_dropdown optgroup option {
   cursor: default !important;
   border-bottom: 1px solid #ccd0d4;
 }
+
 .ws_ame_doc_box .handlediv, .ws_ame_custom_postbox .handlediv {
   display: block;
   float: right;
 }
+
 .ws_ame_doc_box .inside, .ws_ame_custom_postbox .inside {
   margin-bottom: 0;
 }
+
 .ws_ame_doc_box ul, .ws_ame_custom_postbox ul {
   list-style: disc outside;
   margin-left: 1em;
 }
+
 .ws_ame_doc_box li > ul, .ws_ame_custom_postbox li > ul {
   margin-top: 6px;
 }
+
 .ws_ame_doc_box .button-link .toggle-indicator::before, .ws_ame_custom_postbox .button-link .toggle-indicator::before {
   margin-top: 4px;
   width: 20px;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   text-indent: -1px;
   content: "\f142";
@@ -1667,6 +1753,7 @@ select.ws_dropdown optgroup option {
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none !important;
 }
+
 .ws_ame_doc_box.closed .button-link .toggle-indicator::before, .ws_ame_custom_postbox.closed .button-link .toggle-indicator::before {
   content: "\f140";
 }
@@ -1679,14 +1766,17 @@ select.ws_dropdown optgroup option {
 .ws_ame_custom_postbox .ame-tutorial-list {
   margin: 0;
 }
+
 .ws_ame_custom_postbox .ame-tutorial-list a {
   text-decoration: none;
   display: block;
   padding: 4px;
 }
+
 .ws_ame_custom_postbox .ame-tutorial-list ul {
   margin-left: 1em;
 }
+
 .ws_ame_custom_postbox .ame-tutorial-list li {
   display: block;
   margin: 0;
@@ -1707,25 +1797,31 @@ select.ws_dropdown optgroup option {
   padding: 4px;
   width: 350px;
   border: 1px solid #cdd5d5;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
   background: #fff;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+
 #ws_capability_suggestions #ws_previewed_caps {
   margin-top: 0;
   margin-bottom: 6px;
 }
+
 #ws_capability_suggestions td, #ws_capability_suggestions th {
   padding-top: 3px;
   padding-bottom: 3px;
 }
+
 #ws_capability_suggestions tr.ws_preview_has_access .ws_ame_role_name {
   background-color: lightgreen;
 }
+
 #ws_capability_suggestions .ws_ame_suggested_capability {
   cursor: pointer;
 }
+
 #ws_capability_suggestions .ws_ame_suggested_capability:hover {
   background-color: #d0f2d0;
 }
@@ -1743,10 +1839,12 @@ select.ws_dropdown optgroup option {
   margin-top: 0;
   padding-top: 0;
 }
+
 .ame-available-add-ons td {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .ame-available-add-ons .ame-add-on-heading {
   padding-left: 0;
 }
@@ -1757,13 +1855,13 @@ select.ws_dropdown optgroup option {
 
 .ame-add-on-details-link::after {
   /*content: " \f504";
-  font-family: dashicons, sans-serif;*/
+	font-family: dashicons, sans-serif;*/
 }
 
 /*********************************************
       WordPress 5.3+ consistent styles
 **********************************************/
-.ame-is-wp53-plus .ws_edit_field input[type=button] {
+.ame-is-wp53-plus .ws_edit_field input[type="button"] {
   margin-top: 1px;
 }
 
@@ -1773,11 +1871,13 @@ select.ws_dropdown optgroup option {
 .ame-css-border-styles .ame-fixed-label-text {
   min-width: 5em;
 }
+
 .ame-css-border-styles .ame-border-sample-container {
   display: inline-block;
   vertical-align: top;
   min-height: 28px;
 }
+
 .ame-css-border-styles .ame-border-sample {
   display: inline-block;
   width: 14em;
@@ -1856,7 +1956,8 @@ span.description {
   float: left;
   width: 100%;
   margin: 2px 0;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .ws_ame_test_input_name {
@@ -1874,7 +1975,6 @@ span.description {
   float: right;
   width: 60%;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1896,6 +1996,7 @@ span.description {
   width: 60%;
   float: right;
 }
+
 #ws_ame_test_progress .spinner {
   float: none;
   vertical-align: bottom;
@@ -1907,8 +2008,6 @@ span.description {
   width: 100%;
   position: relative;
   border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -1921,7 +2020,6 @@ span.description {
 
 #ws_ame_test_access_frame {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -1933,7 +2031,6 @@ span.description {
 
 #ws_ame_test_access_sidebar {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -1944,6 +2041,7 @@ span.description {
   background-color: #f3f3f3;
   border-left: 1px solid #ddd;
 }
+
 #ws_ame_test_access_sidebar h4:first-of-type {
   margin-top: 0;
 }
@@ -1963,6 +2061,7 @@ span.description {
 .wrap.ws-ame-too-many-tabs .ws-ame-nav-tab-list.nav-tab-wrapper {
   border-bottom-color: transparent;
 }
+
 .wrap.ws-ame-too-many-tabs .ws-ame-nav-tab-list .nav-tab {
   border-bottom: 1px solid #c3c4c7;
   margin-bottom: 10px;
@@ -1987,5 +2086,4 @@ of the page. I haven't found a good way to change the margins of just the last r
 .ws-ame-too-many-tabs #ws_actor_selector {
   margin-top: 0;
 }
-
 /*# sourceMappingURL=menu-editor.css.map */

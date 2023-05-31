@@ -1,8 +1,10 @@
 .ame-form-box {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: white;
   border: 1px solid #ccd0d4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
   margin-bottom: 20px;
   margin-top: 0.5em;
   padding: 0;
@@ -12,6 +14,7 @@
   padding: 8px 12px;
   border-bottom: 1px solid #eee;
 }
+
 .ame-form-box-header h2, .ame-form-box-header h3 {
   margin: 0;
   font-size: 14px;
@@ -37,7 +40,6 @@
 .ame-form-box-group-content {
   display: inline-block;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -55,5 +57,4 @@
   width: 300px;
   float: left;
 }
-
 /*# sourceMappingURL=form-box.css.map */

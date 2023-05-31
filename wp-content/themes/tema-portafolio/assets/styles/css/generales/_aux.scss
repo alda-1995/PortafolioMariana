@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Solway:wght@400;500&display=swap');
 
 $fontSoft: 'Solway', serif;
+$fontDms: 'DM Sans', sans-serif;
 
 h1,
 .h1 {
     font-family: $fontSoft;
-    font-size: calc(40px + (50 - 40) * ((100vw - 300px) / (2300 - 300)));
-    font-weight: 500;
+    font-size: calc(36px + (50 - 36) * ((100vw - 300px) / (2300 - 300)));
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -27,7 +27,7 @@ h2,
 h3,
 .h3 {
     font-family: $fontSoft;
-    font-size: calc(22px + (28 - 22) * ((100vw - 300px) / (2300 - 300)));
+    font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (2300 - 300)));
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -39,7 +39,7 @@ h4,
 .h4 {
     font-family: $fontSoft;
     font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (2300 - 300)));
-    font-weight: normal;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -70,7 +70,7 @@ h5,
 
 p,
 .p {
-    font-family: $fontSoft;
+    font-family: $fontDms;
     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (2300 - 300)));
     font-weight: normal;
     font-stretch: normal;
