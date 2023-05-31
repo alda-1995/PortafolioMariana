@@ -1,0 +1,204 @@
+// @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@400;500&display=swap");
+
+// $fontInter: "Inter", sans-serif;
+// $fontIBM: "IBM Plex Mono", monospace;
+
+// h1,
+// .h1 {
+//     font-family: $fontInter;
+//     // font-size: 40px;
+//     font-size: calc(40px + (50 - 40) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: 500;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     // font-size: 50px;
+//     // }
+// }
+
+// h2,
+// .h2 {
+//     font-family: $fontInter;
+//     // font-size: 28px;
+//     font-size: calc(28px + (36 - 28) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 36px;
+//     // }
+// }
+
+// h3,
+// .h3 {
+//     font-family: $fontInter;
+//     // font-size: 22px;
+//     font-size: calc(22px + (28 - 22) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 28px;
+//     // }
+// }
+
+// h4,
+// .h4 {
+//     font-family: $fontInter;
+//     // font-size: 20px;
+//     font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 22px;
+//     // }
+// }
+
+// h5,
+// .h5 {
+//     font-family: $fontInter;
+//     // font-size: 18px;
+//     font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+// }
+
+// .p-big {
+//     font-family: $fontInter;
+//     // font-size: 18px;
+//     font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+// }
+
+// p,
+// .p {
+//     font-family: $fontInter;
+//     // font-size: 14px;
+//     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: 1.77;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 16px;
+//     // }
+// }
+
+// .p-small {
+//     font-family: $fontInter;
+//     // font-size: 12px;
+//     font-size: calc(12px + (13 - 12) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     // /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 13px;
+//     // }
+// }
+
+// .font-button {
+//     font-family: $fontInter;
+//     // font-size: 13px;
+//     font-size: calc(13px + (14 - 13) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     // font-size: 14px;
+//     // }
+// }
+
+// .font-select {
+//     font-family: $fontIBM;
+//     // font-size: 14px;
+//     font-size: calc(14px + (15 - 14) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     // /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 15px;
+//     // }
+// }
+
+// .font-category {
+//     font-family: $fontIBM;
+//     font-style: normal;
+//     font-weight: 400;
+//     // font-size: 12px;
+//     font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (2300 - 300)));
+//     line-height: 16px;
+//     text-transform: uppercase;
+//     /* Large and up */
+//     // @media screen and (min-width: 64em) {
+//     //     font-size: 14px;
+//     // }
+// }
+
+// .font-text-footer {
+//     font-family: $fontInter;
+//     font-style: normal;
+//     font-weight: 400;
+//     // font-size: 14px;
+//     font-size: calc(14px + (15 - 14) * ((100vw - 300px) / (2300 - 300)));
+//     line-height: 17px;
+// }
+
+// .font-numb-menu {
+//     font-family: $fontIBM;
+//     // font-size: 12px;
+//     font-size: calc(12px + (13 - 12) * ((100vw - 300px) / (2300 - 300)));
+//     font-weight: normal;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+// }
+
+// .font-404 {
+//     font-family: $fontInter;
+//     font-size: 60px;
+//     font-weight: 500;
+//     font-stretch: normal;
+//     font-style: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     /* Large and up */
+//     @media screen and (min-width: 64em) {
+//         font-size: 150px;
+//     }
+//     /* Medium only */
+//     @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+//         font-size: 90px;
+//     }
+// }

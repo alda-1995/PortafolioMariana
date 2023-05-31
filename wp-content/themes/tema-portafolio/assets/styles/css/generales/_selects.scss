@@ -1,0 +1,95 @@
+// .custom-select {
+//     position: relative;
+//     width: 100%;
+//     &.error-select {
+//         margin-bottom: 8px !important;
+//     }
+//     /* Medium and up */
+//     @media screen and (min-width: 40em) {
+//         &.not-pr {
+//             .select-selected {
+//                 border-right: none !important;
+//             }
+//         }
+//     }
+// }
+// .custom-select select {
+//     display: none;
+// }
+
+// .select-items {
+//     color: $negro;
+//     cursor: pointer;
+//     @extend .font-select;
+//     transition: all 300ms;
+//     div {
+//         height: 42px;
+//         display: flex;
+//         align-items: center;
+//         padding-right: 20px;
+//         padding-left: 16px;
+//         @extend .font-button;
+//         transition: all 300ms;
+//         position: relative;
+//         background-color: $blanco;
+//         color: $negro;
+//         &:not(:last-child) {
+//             &:before {
+//                 content: "";
+//                 position: absolute;
+//                 bottom: 0;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 border-bottom: 1px solid #cccccc;
+//                 width: calc(100% - 32px);
+//             }
+//         }
+//     }
+// }
+
+// //container principal
+// .select-selected {
+//     background-color: transparent;
+//     color: $negro;
+//     height: 42px;
+//     display: flex;
+//     align-items: center;
+//     padding-left: 16px;
+//     padding-right: 30px;
+//     @extend .font-select;
+//     transition: all 300ms;
+//     background-origin: content-box;
+//     background-position: right -18px center;
+//     background-repeat: no-repeat;
+//     background-size: 22px 20px;
+//     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E");
+//     border: solid 0.5px rgba(0, 0, 0, 0.2);
+// }
+
+// .select-items {
+//     position: absolute;
+//     background-color: $blanco;
+//     top: 100%;
+//     left: 0;
+//     right: 0;
+//     z-index: 99;
+//     max-height: 300px;
+//     overflow-y: auto;
+//     border: solid 0.5px rgba(0, 0, 0, 0.2);
+// }
+
+// .select-hide {
+//     display: none;
+// }
+
+// .same-as-selected {
+//     color: $blanco !important;
+//     background-color: $negro !important;
+//     pointer-events: none;
+//     &:before {
+//         border-bottom: 1px solid $negro !important;
+//     }
+// }
+// // .select-arrow-active{
+// //    border: solid 1px $moradoOscuro;
+// // }

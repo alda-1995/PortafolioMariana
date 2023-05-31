@@ -1,0 +1,84 @@
+// .pagination-container{
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     .swiper-pagination{
+//         position: static;
+//         transform: none !important;
+//         width: auto !important;
+//         .swiper-pagination-bullet{
+//             margin: 0;
+//             left: unset !important;
+//             transform: none;
+//             width: 25px;
+//             height: 2px;
+//             background-color: rgba(0, 0, 0, 0.3);
+//             border-radius: unset;
+//             opacity: 1;
+//             &:not(:last-child){
+//                 margin-right: 6px;
+//             }
+//             &.swiper-pagination-bullet-active{
+//                 background-color: $negro;
+//             }
+//         }
+//     }
+// }
+
+// .pagination-js{
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     a{
+//         color: $negro;
+//         position: relative;
+//         display: inline-flex;
+//         align-items: center;
+//         padding-bottom: 2px;
+//         padding-left: 6px;
+//         padding-right: 6px;
+//         &:after{
+//             position: absolute;
+//             bottom: 0;
+//             left: 50%;
+//             content: "";
+//             height: 1px;
+//             width: 0;
+//             background-color: rgba(0, 0, 0, 0.5);
+//             transition: all 300ms;
+//             transition: width .5s ease, left .5s ease;
+//         }
+//         &:not(:last-child){
+//             margin-right: 8px;
+//         }
+//     }
+//     .jp-current{
+//         color: rgba(0, 0, 0, 0.5);
+//         &:after{
+//             width: 100%;
+//             left: 0;
+//         }
+//     }
+//     .jp-previous,
+//     .jp-next {
+//         height: 44px;
+//         width: 44px;
+//         background-size: 16px 16px;
+//         background-repeat: no-repeat;
+//         background-position: 50% 50%;
+//         border: none;
+//         border-radius: unset;
+//         padding: 0;
+//     }
+//     .jp-previous {
+//         background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L1 6.5L7 12' stroke='black' /%3E%3C/svg%3E");
+//     }
+//     .jp-next {
+//         background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 12L7 6.5L1 1' stroke='black'/%3E%3C/svg%3E");
+//     }
+// }
+
+// .fraction-customPagination{
+//     color: $negro;
+// }
