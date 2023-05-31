@@ -190,31 +190,31 @@
         return $paths;
     }
     add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-    # Oculta elementos del menú START
-    function remove_menu_elements() {
-        $userData = wp_get_current_user();
-        if($userData->data->user_login != 'AdminTI'){
-            //remove_menu_page( 'index.php' );                  //Dashboard
-            remove_menu_page( 'edit.php' );                   //Posts
-            remove_menu_page( 'upload.php' );                 //Media
-            //remove_menu_page( 'edit.php?post_type=page' );    //Pages
-            remove_menu_page( 'edit-comments.php' );          //Comments
-            remove_menu_page( 'themes.php' );                 //Appearance
-            remove_menu_page( 'plugins.php' );                //Plugins
-            remove_menu_page( 'users.php' );                  //Users
-            remove_menu_page( 'tools.php' );                  //Tools
-            remove_menu_page( 'tools.php' );                  //Tools
-            // remove_menu_page( 'profile.php' );                  //Profile
-            //   remove_menu_page( 'options-general.php' );        //Settings
+    // # Oculta elementos del menú START
+    // function remove_menu_elements() {
+    //     $userData = wp_get_current_user();
+    //     if($userData->data->user_login != 'AdminTI'){
+    //         //remove_menu_page( 'index.php' );                  //Dashboard
+    //         remove_menu_page( 'edit.php' );                   //Posts
+    //         remove_menu_page( 'upload.php' );                 //Media
+    //         //remove_menu_page( 'edit.php?post_type=page' );    //Pages
+    //         remove_menu_page( 'edit-comments.php' );          //Comments
+    //         remove_menu_page( 'themes.php' );                 //Appearance
+    //         remove_menu_page( 'plugins.php' );                //Plugins
+    //         remove_menu_page( 'users.php' );                  //Users
+    //         remove_menu_page( 'tools.php' );                  //Tools
+    //         remove_menu_page( 'tools.php' );                  //Tools
+    //         // remove_menu_page( 'profile.php' );                  //Profile
+    //         //   remove_menu_page( 'options-general.php' );        //Settings
     
-        }
-    }
-    add_action( 'admin_menu', 'remove_menu_elements' );
-    $userData = wp_get_current_user();
-    if($userData->data->user_login != 'AdminTI'){
-        //Oculta custom fields
-        add_filter('acf/settings/show_admin', '__return_false');
-    }
+    //     }
+    // }
+    // add_action( 'admin_menu', 'remove_menu_elements' );
+    // $userData = wp_get_current_user();
+    // if($userData->data->user_login != 'AdminTI'){
+    //     //Oculta custom fields
+    //     add_filter('acf/settings/show_admin', '__return_false');
+    // }
 
     #SMK
     include 'assets/inc/smk.php';
