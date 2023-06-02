@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Solway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Solway:wght@400;500&display=swap');
 
 $fontSoft: 'Solway', serif;
 $fontDms: 'DM Sans', sans-serif;
@@ -73,6 +73,16 @@ p,
     font-family: $fontDms;
     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (2300 - 300)));
     font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.77;
+    letter-spacing: normal;
+}
+
+.font-button{
+    font-family: $fontDms;
+    font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (2300 - 300)));
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.77;

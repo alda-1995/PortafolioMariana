@@ -1,5 +1,5 @@
 /*----------  RESET  ----------*/
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Solway:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Solway:wght@400;500&display=swap");
 *,
 *::after,
 *::before {
@@ -30,6 +30,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1,
@@ -97,6 +101,16 @@ p,
   letter-spacing: normal;
 }
 
+.font-button {
+  font-family: "DM Sans", sans-serif;
+  font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (2300 - 300)));
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.77;
+  letter-spacing: normal;
+}
+
 .text-limit {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -112,6 +126,21 @@ p,
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.btn-main {
+  background-color: #CFEACD;
+  color: #16312D;
+  border-radius: 32px;
+  height: 50px;
+  padding: 14px 24px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .bloque-banner {
@@ -257,5 +286,32 @@ nav .list-menu {
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
+}
+
+.bloque-sobremi {
+  padding: 3rem 0;
+}
+
+.bloque-sobremi .img-container {
+  margin-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .bloque-sobremi .img-container {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bloque-sobremi .img-container {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bloque-sobremi {
+    padding: 6rem 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
