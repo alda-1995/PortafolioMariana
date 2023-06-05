@@ -167,6 +167,25 @@
                     "delay": 0
                 },
                 {
+                    "key": "field_647d4459982df",
+                    "label": "Texto 2",
+                    "name": "texto_2",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
                     "key": "field_6476ced6545b6",
                     "label": "Imagen",
                     "name": "imagen",
@@ -211,5 +230,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685507807
+    "modified": 1685931118
 }

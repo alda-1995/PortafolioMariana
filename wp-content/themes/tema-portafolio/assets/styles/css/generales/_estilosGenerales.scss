@@ -10,3 +10,11 @@
     display: flex;
     align-items: stretch;
 }
+
+.w-full {
+    width: 100%;
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        width: auto;
+    }
+}

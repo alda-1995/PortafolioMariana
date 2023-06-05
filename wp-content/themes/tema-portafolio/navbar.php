@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-between main-content align-items-center">
             <a href="#" class="logo-content">
                 <img src="<?php theme_url(); ?>/assets/images/logo.png" alt="logo img">
-                <h3 class="title-logo mx-3 d-none d-md-flex">Mariana Gutiérrez</h3>
+                <h3 class="title-logo mx-3">Mariana Gutiérrez</h3>
             </a>
             <button class="d-flex-buttons openMenu d-md-none" type="button">
                 <div class="hamburger hamburger--collapse" type="button">
