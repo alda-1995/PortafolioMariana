@@ -3,30 +3,30 @@
 function cptui_register_my_cpts_projects() {
 
 	/**
-	 * Post Type: Projects.
+	 * Post Type: Proyectos.
 	 */
 	$labels = array(
-		"name" => __( "Projects", "RSAAW" ),
-		"singular_name" => __( "Project", "RSAAW" ),
-		"menu_name" => __( "Projects", "RSAAW" ),
-		"all_items" => __( "All Projects", "RSAAW" ),
-		"add_new" => __( "Add project", "RSAAW" ),
-		"add_new_item" => __( "Add new project", "RSAAW" ),
-		"edit_item" => __( "Edit project", "RSAAW" ),
-		"new_item" => __( "New project", "RSAAW" ),
-		"view_item" => __( "View project", "RSAAW" ),
-		"view_items" => __( "View project", "RSAAW" ),
-		"search_items" => __( "Search project", "RSAAW" ),
-		"not_found" => __( "Not results found", "RSAAW" ),
-		"not_found_in_trash" => __( "Not found in trash", "RSAAW" ),
-		"featured_image" => __( "Featured image", "RSAAW" ),
-		"set_featured_image" => __( "Add featured image", "RSAAW" ),
-		"remove_featured_image" => __( "Remove featured image", "RSAAW" ),
-		"use_featured_image" => __( "Use featured image", "RSAAW" ),
+		"name" => __( "Proyectos", "Portafolio Mariana" ),
+		"singular_name" => __( "Proyecto", "Portafolio Mariana" ),
+		"menu_name" => __( "Proyectos", "Portafolio Mariana" ),
+		"all_items" => __( "All Proyectos", "Portafolio Mariana" ),
+		"add_new" => __( "Agregar proyecto", "Portafolio Mariana" ),
+		"add_new_item" => __( "Agregar nuevo proyecto", "Portafolio Mariana" ),
+		"edit_item" => __( "Editar proyecto", "Portafolio Mariana" ),
+		"new_item" => __( "Nuevo proyecto", "Portafolio Mariana" ),
+		"view_item" => __( "Ver proyecto", "Portafolio Mariana" ),
+		"view_items" => __( "Ver proyectos", "Portafolio Mariana" ),
+		"search_items" => __( "Buscar proyecto", "Portafolio Mariana" ),
+		"not_found" => __( "No se encontro resultados", "Portafolio Mariana" ),
+		"not_found_in_trash" => __( "No se encontro en la basura", "Portafolio Mariana" ),
+		"featured_image" => __( "Imagen destacada", "Portafolio Mariana" ),
+		"set_featured_image" => __( "Agregar imagen destacada", "Portafolio Mariana" ),
+		"remove_featured_image" => __( "Eliminar imagen destacada", "Portafolio Mariana" ),
+		"use_featured_image" => __( "Usar imagen destacada", "Portafolio Mariana" ),
 	);
 
 	$args = array(
-		"label" => __( "Projects", "RSAAW" ),
+		"label" => __( "Proyectos", "Portafolio Mariana" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
@@ -53,17 +53,4 @@ function cptui_register_my_cpts_projects() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_projects' );
-
-add_action( 'init', 'crear_art_taxonomy' );
-function crear_art_taxonomy() {
-  register_taxonomy(
-    'tags-projects', // Nombre de la taxonomía
-    'projects', // Nombre del post type que se le asignará
-    array(
-      'label' => __( 'Tags' ),
-      'rewrite' => array( 'slug' => 'tags-projects' ),
-      'hierarchical' => false,
-    )
-  );
-}
 ?>

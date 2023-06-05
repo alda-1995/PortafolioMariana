@@ -88,8 +88,42 @@ nav {
         display: flex;
         align-items: center;
         gap: 2.5rem;
-        a {
+        .link-menu {
             color: $verdeOscuro;
+            position: relative;
+            &:before {
+                color: $rosa;
+                text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+                content: attr(data-hover);
+                position: absolute;
+                transition: transform 0.3s, opacity 0.3s;
+                pointer-events: none;
+            }
+            
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background: $rosa;
+                opacity: 0;
+                transform: translateY(5px);
+                transition: transform 0.3s, opacity 0.3s;
+                pointer-events: none;
+            }
+            
+            &:hover:before, &:focus:before {
+                opacity: 0;
+                transform: translateY(-2px);
+            }
+            
+            &:hover:after, &:focus:after {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            
         }
     }
 }
