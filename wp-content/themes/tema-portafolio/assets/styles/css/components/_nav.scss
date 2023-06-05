@@ -9,8 +9,11 @@ nav {
     padding: 0 0.5rem;
     .main-content {
         height: 80px;
+        // X-Large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            height: 90px;
+        }
     }
-
     .logo-content {
         display: flex;
         align-items: center;
@@ -79,6 +82,10 @@ nav {
         list-style: none;
         margin: 0;
         display: flex;
-        gap: 1rem;
+        align-items: center;
+        gap: 2.5rem;
+        a{
+            color: $verdeOscuro;
+        }
     }
 }

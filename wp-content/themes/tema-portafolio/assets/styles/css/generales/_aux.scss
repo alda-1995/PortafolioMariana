@@ -16,7 +16,7 @@ h1,
 h2,
 .h2 {
     font-family: $fontSoft;
-    font-size: calc(28px + (36 - 28) * ((100vw - 300px) / (2300 - 300)));
+    font-size: calc(28px + (32 - 28) * ((100vw - 300px) / (2300 - 300)));
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -38,19 +38,8 @@ h3,
 h4,
 .h4 {
     font-family: $fontSoft;
-    font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (2300 - 300)));
+    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (2300 - 300)));
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-}
-
-h5,
-.h5 {
-    font-family: $fontSoft;
-    font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (2300 - 300)));
-    font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;

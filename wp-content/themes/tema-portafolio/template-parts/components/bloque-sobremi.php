@@ -16,12 +16,12 @@
                     <?php
                     if ($this->titulo) {
                     ?>
-                        <h2 class="h1 mb-3"><?php echo $this->titulo; ?></h2>
+                        <h2 class="h1 mb-3 title"><?php echo $this->titulo; ?></h2>
                     <?php } ?>
                     <?php
                     if ($this->texto) {
                     ?>
-                        <div class="mb-4"><?php echo $this->texto; ?></div>
+                        <div class="mb-4 texto"><?php echo $this->texto; ?></div>
                     <?php } ?>
                     <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button">Conocer más</a>
                 </div>

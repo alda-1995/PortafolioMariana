@@ -36,7 +36,7 @@
                 {
                     "key": "field_6476cd714b417",
                     "label": "Título",
-                    "name": "titulo",
+                    "name": "titulo_pie",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -55,7 +55,7 @@
                 {
                     "key": "field_6476cd7f4b418",
                     "label": "Parrafo",
-                    "name": "parrafo",
+                    "name": "parrafo_pie",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -107,7 +107,7 @@
                 {
                     "key": "field_6476cdaa4b41c",
                     "label": "Correo",
-                    "name": "correo",
+                    "name": "correo_general",
                     "type": "email",
                     "instructions": "",
                     "required": 0,
@@ -243,5 +243,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685507615
+    "modified": 1685670700
 }

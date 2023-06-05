@@ -9,7 +9,7 @@
         <?php }?>
         <div class="container">
             <div class="row">
-                <div class="col col-md-6 col-lg-5">
+                <div class="col col-md-6 col-lg-8 col-xl-6">
                     <?php 
                     if($this->titulo){
                     ?>
@@ -18,8 +18,9 @@
                     <?php 
                     if($this->texto){
                     ?>
-                    <h4 class="subtitle mb-3"><?php echo $this->texto; ?></h4>
+                    <h4 class="subtitle mb-4"><?php echo $this->texto; ?></h4>
                     <?php }?>
+                    <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button">Contáctame</a>
                 </div>
             </div>
         </div>

@@ -1,11 +1,11 @@
-.bloque-banner{
+.bloque-banner {
     width: 100%;
-    .content-banner{
+    .content-banner {
         padding-top: 8rem;
         padding-bottom: 3rem;
         position: relative;
         min-height: 100vh;
-        .img-fondo{
+        .img-fondo {
             position: absolute;
             top: 0;
             left: 0;
@@ -16,13 +16,21 @@
             background-position: right;
             z-index: 0;
         }
-        .container{
+        .container {
             position: relative;
             z-index: 2;
         }
-
-        .title, .subtitle{
+        .title,
+        .subtitle {
             color: $blanco;
+        }
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            margin-top: 90px;
+            min-height: calc(100vh - 90px);
+            padding: 3rem 0;
+            display: flex;
+            align-items: center;
         }
     }
 }
