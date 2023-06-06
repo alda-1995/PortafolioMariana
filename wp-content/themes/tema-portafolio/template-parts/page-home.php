@@ -17,6 +17,14 @@ smk_get_template_part(
   )
 );
 ?>
+<!-- bloque proyectos -->
+<?php
+smk_get_template_part(
+  'template-parts/components/bloque-proyectos.php',
+  array(
+  )
+);
+?>
 <!-- bloque sobre mi -->
 <?php
 $bloqueAcerca = get_field('bloque_acerca_de_mi');

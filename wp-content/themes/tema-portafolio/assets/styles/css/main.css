@@ -508,4 +508,110 @@ footer .text-copy {
   display: -ms-flexbox;
   display: flex;
 }
+
+.bloque-proyectos {
+  padding: 3rem 0;
+  background-color: #F5F5F5;
+}
+
+.bloque-proyectos .title-g {
+  color: #16312D;
+  text-align: center;
+}
+
+.bloque-proyectos .category-container {
+  width: 100%;
+  overflow-y: scroll;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.bloque-proyectos .category-container .flex-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 2.5rem;
+}
+
+.bloque-proyectos .category-container .flex-category .link-category {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #16312D;
+}
+
+.bloque-proyectos .category-container .flex-category .link-category.active {
+  color: #FF0A88;
+}
+
+@media (min-width: 576px) {
+  .bloque-proyectos .category-container .flex-category {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (min-width: 576px) {
+  .bloque-proyectos .category-container {
+    overflow: hidden;
+  }
+}
+
+.bloque-proyectos .card-proyecto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.bloque-proyectos .card-proyecto .img-proyecto {
+  height: 150px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .bloque-proyectos .card-proyecto .img-proyecto {
+    height: 250px;
+  }
+}
+
+.bloque-proyectos .card-proyecto .title-proyecto {
+  color: #16312D;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+  .bloque-proyectos .card-proyecto {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bloque-proyectos {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bloque-proyectos {
+    padding: 6rem 0;
+  }
+}
 /*# sourceMappingURL=main.css.map */

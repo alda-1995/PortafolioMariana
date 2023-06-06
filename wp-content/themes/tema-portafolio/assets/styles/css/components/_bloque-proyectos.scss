@@ -1,0 +1,72 @@
+.bloque-proyectos {
+    padding: 3rem 0;
+    background-color: $blanco2;
+    .title-g {
+        color: $verdeOscuro;
+        text-align: center;
+    }
+
+    .category-container {
+        width: 100%;
+        overflow-y: scroll;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 0.5rem;
+        .flex-category {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 2.5rem;
+            .link-category {
+                flex-shrink: 0;
+                color: $verdeOscuro;
+                &.active {
+                    color: $rosa2;
+                }
+            }
+            // Small devices (landscape phones, 576px and up)
+            @media (min-width: 576px) {
+                justify-content: flex-end;
+            }
+        }
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+            overflow: hidden;
+        }
+    }
+
+    .card-proyecto {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-bottom: 1rem;
+        .img-proyecto {
+            height: 150px;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 1rem;
+            // X-Large devices (large desktops, 1200px and up)
+            @media (min-width: 1200px) {
+                height: 250px;
+            }
+        }
+        .title-proyecto {
+            color: $verdeOscuro;
+            flex: 1 0 auto;
+            margin-bottom: 0;
+        }
+        // X-Large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            margin-bottom: 2rem;
+        }
+    }
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        padding: 5rem 0;
+    }
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        padding: 6rem 0;
+    }
+}
