@@ -5,7 +5,13 @@
         color: $verdeOscuro;
         text-align: center;
     }
-
+    #proyectosContainer {
+        min-height: 300px;
+        // X-Large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            min-height: 400px;
+        }
+    }
     .category-container {
         width: 100%;
         overflow-y: scroll;
@@ -21,6 +27,7 @@
                 color: $verdeOscuro;
                 &.active {
                     color: $rosa2;
+                    pointer-events: none;
                 }
             }
             // Small devices (landscape phones, 576px and up)

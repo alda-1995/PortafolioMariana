@@ -40,12 +40,12 @@
         <?php
         if ($articulos->have_posts()) :
         ?>
-            <div class="row">
+            <div class="row" id="proyectosContainer">
                 <?php
                 while ($articulos->have_posts()) : $articulos->the_post();
                 ?>
                     <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-                        <div class="card-proyecto">
+                        <a href="<?php echo get_the_permalink(); ?>" class="card-proyecto">
                             <?php
                             $imgUrl = get_the_post_thumbnail_url();
                             if ($imgUrl) {
@@ -53,7 +53,7 @@
                                 <div class="img-proyecto" style="background-image: url('<?php echo $imgUrl; ?>');"></div>
                             <?php } ?>
                             <p class="title-proyecto"><?php echo get_the_title(); ?></p>
-                        </div>
+                        </a>
                     </div>
                 <?php
                 endwhile; ?>

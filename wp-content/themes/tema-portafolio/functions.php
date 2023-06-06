@@ -136,15 +136,13 @@
         ));
     }
 
-    // require_once (get_stylesheet_directory() . '/requets/filterPeopleRegion.php');
-    // require_once (get_stylesheet_directory() . '/requets/filterProyects.php');
-    // require_once (get_stylesheet_directory() . '/requets/getDataProyects.php');
+    require_once (get_stylesheet_directory() . '/requets/filterProyectos.php');
 
-    // function add_ajax_actions() {
-    //     add_action( 'wp_ajax_actionFiltraGenteRegion', 'filterPeople' );
-    //     add_action( 'wp_ajax_nopriv_actionFiltraGenteRegion', 'filterPeople' );
-    // }
-    // add_action( 'admin_init', 'add_ajax_actions' );
+    function add_ajax_actions() {
+        add_action( 'wp_ajax_actionFiltraProyecto', 'filtraProyectos' );
+        add_action( 'wp_ajax_nopriv_actionFiltraProyecto', 'filtraProyectos' );
+    }
+    add_action( 'admin_init', 'add_ajax_actions' );
 
     # Remueve Welcome Widget from the Dashboard
     function remove_dashboard_widgets() {
@@ -188,10 +186,6 @@
     include_once( get_stylesheet_directory() . '/assets/inc/security.php' );
 
     require('assets/inc/acf/option-page/settings.php');
-    // include 'assets/inc/cpt/proyects.php';
-
-    //tax
-    // include 'assets/inc/tax/tax_region.php';
 
     //Agrega ACF en rest api//////////////////////////////////////////////////////////////
     function create_ACF_meta_in_REST() {

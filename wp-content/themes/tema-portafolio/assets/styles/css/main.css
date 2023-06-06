@@ -519,6 +519,16 @@ footer .text-copy {
   text-align: center;
 }
 
+.bloque-proyectos #proyectosContainer {
+  min-height: 300px;
+}
+
+@media (min-width: 1200px) {
+  .bloque-proyectos #proyectosContainer {
+    min-height: 400px;
+  }
+}
+
 .bloque-proyectos .category-container {
   width: 100%;
   overflow-y: scroll;
@@ -544,6 +554,7 @@ footer .text-copy {
 
 .bloque-proyectos .category-container .flex-category .link-category.active {
   color: #FF0A88;
+  pointer-events: none;
 }
 
 @media (min-width: 576px) {
