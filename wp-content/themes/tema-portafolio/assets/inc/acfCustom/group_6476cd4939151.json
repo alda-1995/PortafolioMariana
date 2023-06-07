@@ -106,7 +106,7 @@
             "sub_fields": [
                 {
                     "key": "field_6476cdaa4b41c",
-                    "label": "Correo",
+                    "label": "Correo General",
                     "name": "correo_general",
                     "type": "email",
                     "instructions": "",
@@ -221,6 +221,45 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_648012ebd51d8",
+                    "label": "Correos",
+                    "name": "correos",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Agregar",
+                    "sub_fields": [
+                        {
+                            "key": "field_6480131ed51d9",
+                            "label": "Correo",
+                            "name": "correo",
+                            "type": "email",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -243,5 +282,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685670700
+    "modified": 1686115117
 }

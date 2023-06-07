@@ -50,6 +50,8 @@
     }
     // Large devices (desktops, 992px and up)
     @media (min-width: 992px) {
+        padding-top: 9rem;
+        padding-bottom: 6rem;
         .btn-float {
             position: absolute;
             top: 0;

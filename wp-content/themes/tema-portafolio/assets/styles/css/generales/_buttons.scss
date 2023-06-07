@@ -9,6 +9,13 @@
     text-align: center;
     justify-content: center;
     transition: background-color 0.5s ease;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    &.disabled{
+        opacity: 0.5;
+        pointer-events: none;
+    }
     &.pink{
         background-color: $rosaClaro;
         &:hover, &:focus{

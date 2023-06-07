@@ -1,0 +1,48 @@
+.form-input{
+    width: 100%;
+    margin-bottom: 1rem;
+    input{
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #BA68C8;
+        width: 100%;
+        padding: 8px 16px 8px 0px;
+        color: $verdeOscuro;
+        margin-bottom: 0;
+        &::placeholder{
+            opacity: 1;
+            color:#17171799;
+        }
+    }
+    textarea{
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #BA68C8;
+        width: 100%;
+        padding: 8px 16px 8px 0px;
+        color: $verdeOscuro;
+        margin-bottom: 0;
+        max-height: 80px;
+        min-height: 80px;
+        &::placeholder{
+            opacity: 1;
+            color:#17171799;
+        }
+    }
+}
+
+.error {
+    display: inline-block;
+    color: $rojo;
+    @extend .p;
+    margin-bottom: 0;
+}
+
+.error-me{
+    display: none;
+    color: $rojo;
+    @extend .p;
+    margin-bottom: 25px;
+}

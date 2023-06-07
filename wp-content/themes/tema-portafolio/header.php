@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="RSAAW">
+    <meta name="author" content="Porfolio Mariana Gutiérrez">
     <title><?php the_title(); ?></title>
     <meta name="keywords" content="workshop architecture, sustainable design, architecture design firm, architecture and sustainable design, architecture firms canada, architectural design, sustainable workshop">
     <?php wp_head(); ?>
     <?php date_default_timezone_set("America/Mexico_City"); ?>
     <script>
-        var theme_url = '<?php theme_url(); ?>';
-        var linkGracias = '<?php echo get_the_permalink(354); ?>';
+        var linkGracias = '<?php echo get_the_permalink(104); ?>';
     </script>
 
 </head>

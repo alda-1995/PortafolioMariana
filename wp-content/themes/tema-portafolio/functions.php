@@ -141,6 +141,9 @@
     function add_ajax_actions() {
         add_action( 'wp_ajax_actionFiltraProyecto', 'filtraProyectos' );
         add_action( 'wp_ajax_nopriv_actionFiltraProyecto', 'filtraProyectos' );
+        //envia correo contacto
+        add_action( 'wp_ajax_actionSendCorreoContacto', 'sendContacto');
+        add_action( 'wp_ajax_nopriv_actionSendCorreoContacto', 'sendContacto');
     }
     add_action( 'admin_init', 'add_ajax_actions' );
 
@@ -216,87 +219,65 @@
     // // SMTP Authentication
     // function send_smtp_email( $phpmailer ) {
     //    $phpmailer->isSMTP();
-    //    $phpmailer->Host = 'g5tv-gf7f.accessdomain.com';
+    //    $phpmailer->Host = 'mail.cnll.mx';
     //    $phpmailer->Port = 465; // could be different
     //    $phpmailer->SMTPDebug = 0;
-    //    $phpmailer->Username = 'mailing@canalla.agency'; // if required
-    //    $phpmailer->Password = 'M5b#C]fc!2p'; // if required
+    //    $phpmailer->Username = 'mailing@cnll.mx'; // if required
+    //    $phpmailer->Password = 'Yfb6FR61d,ze'; // if required
     //    $phpmailer->SMTPAuth = true; // if required
     //    $phpmailer->SMTPSecure = 'ssl'; // enable if required, 'tls' is another possible value
-    //    $phpmailer->From = 'no-reply@rsaaw.com';
-    //    $phpmailer->FromName = 'Formulario de contacto - RSAAW';
+    //    $phpmailer->From = 'mailing@cnll.mx';
+    //    $phpmailer->FromName = 'Formulario de contacto - Portafolio Mariana';
     // }
     // add_action( 'phpmailer_init', 'send_smtp_email' );
 
     function sendContacto(){
-        // $formulario = $_POST['formulario'];
-        // $name = ($formulario['name']) ? $formulario['name'] : "";
-        // $email = ($formulario['email']) ? $formulario['email'] : "";
-        // $subject = ($formulario['filterSubject']) ? $formulario['filterSubject'] : "";
-        // $message = ($formulario['message']) ? $formulario['message'] : "";
-        // $blockFooter = get_field('block_footer', 'option');
-        // $subjects = $blockFooter['subjets'];
-        // $url = get_template_directory_uri().'/mail-contacto.php';
-        // $ch = curl_init();
-        // curl_setopt ($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-        // curl_setopt($ch, CURLOPT_POSTFIELDS, 'name='.$name.'&email='.$email.'&subject='.$subject.'&message='.$message);
-        // curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
-        // curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
-        // $contents = curl_exec($ch);
-        // if (curl_errno($ch)) {
-        // echo curl_error($ch);
-        // echo "\n<br />";
-        // $contents = '';
-        // } else {
-        // curl_close($ch);
-        // }
-        // if (!is_string($contents) || !strlen($contents)) {
-        //     // echo "Failed to get contents.";
-        //     $contents = '';
-        // }
-        // $correoSend = array();
-        // foreach ($subjects as $sub) {
-        //     $titleSub = $sub['subject'];
-        //     $emailSubject = $sub['emails'];
-        //     if($titleSub == $subject && !empty($emailSubject)){
-        //         foreach ($emailSubject as $correoSubject) {
-        //             $correoSend[] = $correoSubject['email'];
-        //         }
-        //         break;
-        //     }
-        // }
+        $formulario = $_POST['formulario'];
+        $nombre = ($formulario['nombre']) ? $formulario['nombre'] : "";
+        $correoForm = ($formulario['correo']) ? $formulario['correo'] : "";
+        $telefono = ($formulario['telefono']) ? $formulario['telefono'] : "";
+        $mensaje = ($formulario['mensaje']) ? $formulario['mensaje'] : "";
+        //correos remitentes
+        $formularioContacto = get_field('contacto', 'option');
+        $correosField = $formularioContacto['correos'];
+       
+        $url = get_template_directory_uri().'/mail-contacto.php';
+        $ch = curl_init();
+        curl_setopt ($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'nombre='.$nombre.'&correo='.$correoForm.'&telefono='.$telefono.'&mensaje='.$mensaje);
+        curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
+        $contents = curl_exec($ch);
+        if (curl_errno($ch)) {
+        echo curl_error($ch);
+        echo "\n<br />";
+        $contents = '';
+        } else {
+        curl_close($ch);
+        }
+        if (!is_string($contents) || !strlen($contents)) {
+            // echo "Failed to get contents.";
+            $contents = '';
+        }
+        $correoSend = array();
+        foreach ($correosField as $correo) {
+            $correoSend[] = $correo['correo'];
+        }
 
-        // $response = array();
-        // $body = $contents;
-        // $multiple_recipients = implode(', ', $correoSend);
-        // $subject = 'Contact Form - RSAAW';
-        // $headers = array('Content-Type: text/html; charset=UTF-8');
-        // $result = wp_mail($multiple_recipients, $subject, $body, $headers);
-        // //se guarda la info independiente del si se envio o no
-        // date_default_timezone_set("America/Mexico_City");
-        // $fecha = date("Y-m-d H:i:s");
-        // //code insert
-        // global $user_ID;
-        // $new_post = array(
-        //     'post_title' => $name,
-        //     'post_status' => 'publish',
-        //     'post_date' => $fecha,
-        //     'post_author' => $user_ID,
-        //     'post_type' => 'emails-contact'
-        // );
-        // $post_id = wp_insert_post($new_post);
-        // if($post_id){
-        //     update_field('email', $email, $post_id);
-        //     update_field('subject', $subject, $post_id);
-        //     update_field('message', $message, $post_id);
-        // }
-        // if ($result) {
-        //     $response = array('code' => "success");
-        //     print_r(json_encode($response));
-        // }else{
-        //     $response = array('code' => "error");
-        //     print_r(json_encode($response));
-        // }
-        // die();
+        $response = array();
+        $body = $contents;
+        $multiple_recipients = implode(', ', $correoSend);
+        $subject = 'Formulario de contacto - Portafolio Mariana';
+        $headers = array('Content-Type: text/html; charset=UTF-8');
+        $result = wp_mail($multiple_recipients, $subject, $body, $headers);
+
+        if ($result) {
+            $response = array('code' => "success");
+            print_r(json_encode($response));
+        }else{
+            $response = array('code' => "error");
+            print_r(json_encode($response));
+        }
+        die();
     }

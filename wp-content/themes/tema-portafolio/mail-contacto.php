@@ -84,10 +84,10 @@
             </tr>
             <tr>
                 <td style="padding: 0px 0 30px 0;">
-                    <b>Subject: </b><?php echo $_POST['subject']; ?><br>
-                    <b>Name: </b><?php echo $_POST['name']; ?><br>
-                    <b>Email: </b><?php echo $_POST['email']; ?><br>
-                    <b>Message: </b><?php echo $_POST['message']; ?><br>
+                    <b>Nombre: </b><?php echo $_POST['nombre']; ?><br>
+                    <b>Correo: </b><?php echo $_POST['correo']; ?><br>
+                    <b>Teléfono: </b><?php echo $_POST['telefono']; ?><br>
+                    <b>Mensaje: </b><?php echo $_POST['mensaje']; ?><br>
                 </td>
             </tr>
         </table>
