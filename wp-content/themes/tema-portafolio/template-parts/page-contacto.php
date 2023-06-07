@@ -37,21 +37,29 @@ $imgBig = get_field('imagen_grande');
         ?>
           <h4 class="text-contacto mb-3"><?php echo $texto; ?></h4>
         <?php } ?>
-        <form id="formularioContacto" name="formularioContacto" novalidate>
-          <div class="form-input">
-            <input class="parrafo" type="text" name="nombre" placeholder="Nombre" required>
+        <div class="container-formulario">
+          <div class="form-c-principal">
+            <form id="formularioContacto" name="formularioContacto" novalidate>
+              <div class="form-input">
+                <input class="parrafo" type="text" name="nombre" placeholder="Nombre" required>
+              </div>
+              <div class="form-input">
+                <input class="parrafo" type="email" name="correo" placeholder="Correo" required>
+              </div>
+              <div class="form-input">
+                <input class="parrafo phoneValidationMark" type="text" name="telefono" placeholder="Teléfono" required>
+              </div>
+              <div class="form-input">
+                <textarea class="parrafo" name="mensaje" placeholder="Mensaje"></textarea>
+              </div>
+              <button type="submit" class="btn-main font-button" id="btnContacto">Envíar</button>
+            </form>
           </div>
-          <div class="form-input">
-            <input class="parrafo" type="email" name="correo" placeholder="Correo" required>
+          <div class="message-error-contact">
+            <h4 class="text-contacto mb-3">Se genero un error al enviar. Vuelve a intentarlo.</h4>
+            <a href="#" class="btn-main font-button hide-error-contact">Volver a intentar</a>
           </div>
-          <div class="form-input">
-            <input class="parrafo phoneValidationMark" type="text" name="telefono" placeholder="Teléfono" required>
-          </div>
-          <div class="form-input">
-            <textarea class="parrafo" name="mensaje" placeholder="Mensaje"></textarea>
-          </div>
-          <button type="submit" class="btn-main font-button" id="btnContacto">Envíar</button>
-        </form>
+        </div>
       </div>
     </div>
   </div>

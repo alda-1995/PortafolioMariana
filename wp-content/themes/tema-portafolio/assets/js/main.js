@@ -136,8 +136,21 @@ function sendFormularioContacto() {
 }
 
 function showMessageErrors(){
-    
+    var tl = gsap.timeline();
+    tl.to('.form-c-principal', { opacity: 0, duration: 1 });
+    tl.set('.message-error-contact', { zIndex: 2, pointerEvents: "unset" });
+    tl.set('.form-c-principal', { zIndex: -1, pointerEvents: "none" });
+    tl.to('.message-error-contact', { opacity: 1, duration: 1 });
 }
+
+$('.hide-error-contact').click(function (e) {
+    e.preventDefault();
+    var tl = gsap.timeline();
+    tl.to('.message-error-contact', { opacity: 0, duration: 1 });
+    tl.set('.form-c-principal', { zIndex: 2, pointerEvents: "unset" });
+    tl.set('.message-error-contact', { zIndex: -1, pointerEvents: "none" });
+    tl.to('.form-c-principal', { opacity: 1, duration: 1 });
+});
 
 function getFormData($form) {
     var unindexed_array = $form.serializeArray();

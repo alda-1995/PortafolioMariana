@@ -896,6 +896,26 @@ footer .text-copy {
   color: #707070;
 }
 
+.bloque-contacto .content-contacto .content-formulario .container-formulario {
+  position: relative;
+}
+
+.bloque-contacto .content-contacto .content-formulario .message-error-contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.bloque-contacto .content-contacto .content-formulario .message-error-contact .title-error {
+  color: #000000;
+  margin-bottom: 35px;
+}
+
 .bloque-contacto .content-contacto .content-formulario .btn-main {
   width: 100%;
 }

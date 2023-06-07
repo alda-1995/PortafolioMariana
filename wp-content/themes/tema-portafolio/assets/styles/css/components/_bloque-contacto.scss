@@ -32,6 +32,24 @@
             .text-contacto {
                 color: #707070;
             }
+            .container-formulario{
+                position: relative;
+            }
+            .message-error-contact {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                pointer-events: none;
+                opacity: 1;
+                width: 100%;
+                padding: 16px 0;
+                .title-error {
+                    color: $negro;
+                    margin-bottom: 35px;
+                }
+            }
+
             .btn-main {
                 width: 100%;
                 // Large devices (desktops, 992px and up)
