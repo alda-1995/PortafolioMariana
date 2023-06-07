@@ -1,7 +1,7 @@
 <nav>
     <div class="container">
         <div class="d-flex justify-content-between main-content align-items-center">
-            <a href="#" class="logo-content">
+            <a href="<?php blog_url(); ?>" class="logo-content">
                 <img src="<?php theme_url(); ?>/assets/images/logo.png" alt="logo img">
                 <h3 class="title-logo mx-3">Mariana Gutiérrez</h3>
             </a>

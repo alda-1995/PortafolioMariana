@@ -40,34 +40,6 @@
             overflow: hidden;
         }
     }
-
-    .card-proyecto {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        margin-bottom: 1rem;
-        .img-proyecto {
-            height: 150px;
-            width: 100%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-bottom: 1rem;
-            // X-Large devices (large desktops, 1200px and up)
-            @media (min-width: 1200px) {
-                height: 250px;
-            }
-        }
-        .title-proyecto {
-            color: $verdeOscuro;
-            flex: 1 0 auto;
-            margin-bottom: 0;
-        }
-        // X-Large devices (large desktops, 1200px and up)
-        @media (min-width: 1200px) {
-            margin-bottom: 2rem;
-        }
-    }
     // Large devices (desktops, 992px and up)
     @media (min-width: 992px) {
         padding: 5rem 0;
@@ -75,5 +47,38 @@
     // X-Large devices (large desktops, 1200px and up)
     @media (min-width: 1200px) {
         padding: 6rem 0;
+    }
+}
+
+.card-proyecto {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    margin-bottom: 1rem;
+    .img-proyecto {
+        height: 150px;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 1rem;
+        // X-Large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            height: 250px;
+        }
+    }
+    .title-proyecto {
+        color: $verdeOscuro;
+        flex: 1 0 auto;
+        margin-bottom: 0;
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            padding: 0 1rem;
+        }
+    }
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        margin-bottom: 2rem;
     }
 }

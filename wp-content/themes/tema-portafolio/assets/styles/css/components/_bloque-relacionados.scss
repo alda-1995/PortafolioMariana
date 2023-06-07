@@ -1,0 +1,16 @@
+.bloque-proyectos-relacionados {
+    background-color: $blanco2;
+    padding: 3rem 0;
+    .title-relacionados{
+        color: $verdeOscuro;
+        text-align: center;
+    }
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        padding: 5rem 0;
+    }
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        padding: 6rem 0;
+    }
+}
