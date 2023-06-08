@@ -25,7 +25,7 @@ function filtraProyectos(filtro) {
     $('.container-notResults').hide();
     // $('.paginationViajes').hide();
     filtroProyecto = filtro;
-    gsap.delayedCall(2, ajaxProyectos);
+    gsap.delayedCall(1, ajaxProyectos);
 }
 
 function ajaxProyectos() {
