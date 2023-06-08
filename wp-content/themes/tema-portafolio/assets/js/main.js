@@ -5,11 +5,14 @@ var isMobilTabled = (jQuery(window).width() < 1024) ? true : false;
 var isMobil = window.matchMedia("only screen and (max-width: 760px)").matches;
 let filtroProyecto = "";
 
+$(document).ready(function () {
+    getPaginationProyectos();
+});
+
 $('.openMenu').click(function (e) {
     e.preventDefault();
     $('.hamburger').addClass("is-active");
 });
-
 
 $('.link-category').click(function (e) {
     e.preventDefault();
@@ -23,7 +26,7 @@ function filtraProyectos(filtro) {
     $('#proyectosContainer').empty();
     $('.loader-content').addClass("show-loader");
     $('.container-notResults').hide();
-    // $('.paginationViajes').hide();
+    $('.paginationProyectos').hide();
     filtroProyecto = filtro;
     gsap.delayedCall(1, ajaxProyectos);
 }
@@ -39,6 +42,7 @@ function ajaxProyectos() {
         success: function (resp) {
             $('.loader-content').removeClass("show-loader");
             $('#proyectosContainer').html(resp);
+            getPaginationProyectos();
         },
         error: function (jqXHR, estado, error) {
             $('.loader-content').removeClass("show-loader");
@@ -48,6 +52,23 @@ function ajaxProyectos() {
 
         }
     });
+}
+
+function getPaginationProyectos() {
+    if ($('.card-proyecto').length > 12) {
+        $('.paginationProyectos').css("display", "flex");
+        $(".paginationProyectos").jPages({
+            containerID: "proyectosContainer",
+            perPage: 12,
+            startPage: 1,
+            startRange: 1,
+            midRange: 12,
+            endRange: 1,
+            minHeight: false
+        });
+        $('.jp-previous').empty();
+        $('.jp-next').empty();
+    }
 }
 
 var inputPhones = document.querySelectorAll('.phoneValidationMark');
