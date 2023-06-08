@@ -41,7 +41,7 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 <?php 
                 if($youtube){
                 ?>
-                <li>
+                <li class="hover-youtube">
                     <a href="<?php echo $youtube; ?>" target="_blank">
                         <?php
                         smk_get_template_part(
@@ -55,7 +55,7 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 <?php 
                 if($facebook){
                 ?>
-                <li>
+                <li class="hover-facebook">
                     <a href="<?php echo $facebook; ?>" target="_blank">
                         <?php
                         smk_get_template_part(
@@ -69,7 +69,7 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 <?php 
                 if($instagram){
                 ?>
-                <li>
+                <li class="hover-instagram">
                     <a href="<?php echo $instagram; ?>" target="_blank">
                         <?php
                         smk_get_template_part(
@@ -83,7 +83,7 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 <?php 
                 if($linkedin){
                 ?>
-                <li>
+                <li class="hover-linkedin">
                     <a href="<?php echo $linkedin; ?>" target="_blank">
                         <?php
                         smk_get_template_part(
@@ -98,8 +98,8 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 if($numeroWhats){
                     $telefonoWhats = telCorrect($numeroWhats);
                 ?>
-                <li>
-                    <a href="<?php echo "https://api.whatsapp.com/send?phone=52" . $telefonoWhats; ?>" target="_blank" class="icon-fill-whatsapp">
+                <li class="hover-whatsapp">
+                    <a href="<?php echo "https://api.whatsapp.com/send?phone=52" . $telefonoWhats; ?>" target="_blank">
                         <?php
                         smk_get_template_part(
                             'template-parts/iconos/whatsapp.php',

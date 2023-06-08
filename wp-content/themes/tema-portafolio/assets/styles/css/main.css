@@ -607,12 +607,48 @@ footer .text-copy {
   border-radius: 50%;
   height: 44px;
   width: 44px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.list-socials li.hover-youtube:hover .bg {
+  fill: #FF0000 !important;
+}
+
+.list-socials li.hover-facebook:hover {
+  background-color: #337fff;
+}
+
+.list-socials li.hover-facebook:hover .bg {
+  fill: #FFFFFF !important;
+}
+
+.list-socials li.hover-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.list-socials li.hover-instagram:hover .bg {
+  fill: #FFFFFF !important;
+}
+
+.list-socials li.hover-whatsapp:hover {
+  background-color: #25d366;
+}
+
+.list-socials li.hover-whatsapp:hover .bg {
+  fill: #FFFFFF !important;
+}
+
+.list-socials li.hover-linkedin:hover {
+  background-color: #006699;
 }
 
 .list-socials li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 .bloque-proyectos {

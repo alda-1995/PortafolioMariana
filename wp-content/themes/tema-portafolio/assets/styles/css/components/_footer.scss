@@ -56,8 +56,36 @@ footer {
         border-radius: 50%;
         height: 44px;
         width: 44px;
+        transition: all 400ms;
+        &.hover-youtube:hover{
+            .bg{
+                fill: #FF0000 !important;
+            }
+        }
+        &.hover-facebook:hover{
+            background-color: #337fff;
+            .bg{
+                fill: $blanco !important;
+            }
+        }
+        &.hover-instagram:hover{
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+            .bg{
+                fill: $blanco !important;
+            }
+        }
+        &.hover-whatsapp:hover{
+            background-color: #25d366;
+            .bg{
+                fill: $blanco !important;
+            }
+        }
+        &.hover-linkedin:hover{
+            background-color: #006699;
+        }
         a {
             display: flex;
+            transition: all 400ms;
         }
     }
 }
