@@ -21,8 +21,8 @@ $('.link-category').click(function (e) {
 
 function filtraProyectos(filtro) {
     $('#proyectosContainer').empty();
-    // $('.container-loader').css("display", "flex");
-    // $('.container-notResults').hide();
+    $('.loader-content').addClass("show-loader");
+    $('.container-notResults').hide();
     // $('.paginationViajes').hide();
     filtroProyecto = filtro;
     gsap.delayedCall(2, ajaxProyectos);
@@ -37,12 +37,12 @@ function ajaxProyectos() {
             'filtro': filtroProyecto,
         },
         success: function (resp) {
-            // $('.container-loader').hide();
+            $('.loader-content').removeClass("show-loader");
             $('#proyectosContainer').html(resp);
         },
         error: function (jqXHR, estado, error) {
-            // $('.container-loader').hide();
-            // $('.container-notResults').css("display", "flex");
+            $('.loader-content').removeClass("show-loader");
+            $('.container-notResults').css("display", "flex");
         },
         complete: function (jqXHR, estado) {
 

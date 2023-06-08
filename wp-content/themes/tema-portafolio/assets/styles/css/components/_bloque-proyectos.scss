@@ -5,7 +5,7 @@
         color: $verdeOscuro;
         text-align: center;
     }
-    #proyectosContainer {
+    .parent-content{
         min-height: 300px;
         // X-Large devices (large desktops, 1200px and up)
         @media (min-width: 1200px) {
@@ -38,6 +38,21 @@
         // Small devices (landscape phones, 576px and up)
         @media (min-width: 576px) {
             overflow: hidden;
+        }
+    }
+    .container-notResults{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .title{
+            color: $rosa;
+        }
+
+        min-height: 300px;
+        // X-Large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            min-height: 400px;
         }
     }
     // Large devices (desktops, 992px and up)
