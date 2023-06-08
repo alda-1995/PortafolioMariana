@@ -17,7 +17,7 @@ footer {
     .correo-footer {
         color: $verdeOscuro;
     }
-    .img-footer{
+    .img-footer {
         width: 150px;
     }
     .icon-fill-whatsapp {
@@ -25,7 +25,7 @@ footer {
             stroke: $rosa;
         }
     }
-    .text-copy{
+    .text-copy {
         color: $blanco;
     }
 }
@@ -33,9 +33,13 @@ footer {
 .list-text-pie {
     align-items: center;
     text-align: center;
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        margin-bottom: 2.5rem;
+    }
 }
 
-.title-socials{
+.title-socials {
     color: $verdeOscuro;
     text-align: center;
 }
@@ -57,30 +61,37 @@ footer {
         height: 44px;
         width: 44px;
         transition: all 400ms;
-        &.hover-youtube:hover{
-            .bg{
-                fill: #FF0000 !important;
+        &.hover-youtube:hover {
+            .bg {
+                fill: #ff0000 !important;
             }
         }
-        &.hover-facebook:hover{
+        &.hover-facebook:hover {
             background-color: #337fff;
-            .bg{
+            .bg {
                 fill: $blanco !important;
             }
         }
-        &.hover-instagram:hover{
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-            .bg{
+        &.hover-instagram:hover {
+            background: radial-gradient(
+                circle at 30% 107%,
+                #fdf497 0%,
+                #fdf497 5%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285aeb 90%
+            );
+            .bg {
                 fill: $blanco !important;
             }
         }
-        &.hover-whatsapp:hover{
+        &.hover-whatsapp:hover {
             background-color: #25d366;
-            .bg{
+            .bg {
                 fill: $blanco !important;
             }
         }
-        &.hover-linkedin:hover{
+        &.hover-linkedin:hover {
             background-color: #006699;
         }
         a {

@@ -571,6 +571,12 @@ footer .text-copy {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .list-text-pie {
+    margin-bottom: 2.5rem;
+  }
+}
+
 .title-socials {
   color: #16312D;
   text-align: center;
@@ -612,7 +618,7 @@ footer .text-copy {
 }
 
 .list-socials li.hover-youtube:hover .bg {
-  fill: #FF0000 !important;
+  fill: #ff0000 !important;
 }
 
 .list-socials li.hover-facebook:hover {
