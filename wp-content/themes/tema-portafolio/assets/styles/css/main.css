@@ -823,6 +823,14 @@ footer .text-copy {
   fill: #ffffff !important;
 }
 
+.list-socials li.hover-art:hover {
+  background-color: #000000;
+}
+
+.list-socials li.hover-art:hover .bg {
+  fill: #13aff0;
+}
+
 .list-socials li a {
   display: -webkit-box;
   display: -ms-flexbox;

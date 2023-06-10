@@ -97,6 +97,20 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 </li>
                 <?php }?>
                 <?php 
+                if($artStation){
+                ?>
+                <li class="hover-art">
+                    <a href="<?php echo $artStation; ?>" target="_blank">
+                        <?php
+                        smk_get_template_part(
+                            'template-parts/iconos/art.php',
+                            array()
+                        );
+                        ?>
+                    </a>
+                </li>
+                <?php }?>
+                <?php 
                 if($youtube){
                 ?>
                 <li class="hover-youtube">

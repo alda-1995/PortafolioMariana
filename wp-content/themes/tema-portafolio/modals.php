@@ -35,23 +35,11 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 $facebook = $redes['facebook'];
                 $instagram = $redes['instagram'];
                 $linkedin = $redes['linkedin'];
+                $behance = $redes['behance'];
+                $artStation = $redes['art_station'];
             ?>
                 <p class="title-socials font-small-menu opacityAnimation">Redes sociales</p>
                 <ul class="list-socials opacityAnimation">
-                    <?php
-                    if ($youtube) {
-                    ?>
-                        <li class="hover-youtube">
-                            <a href="<?php echo $youtube; ?>" target="_blank">
-                                <?php
-                                smk_get_template_part(
-                                    'template-parts/iconos/youtube.php',
-                                    array()
-                                );
-                                ?>
-                            </a>
-                        </li>
-                    <?php } ?>
                     <?php
                     if ($facebook) {
                     ?>
@@ -81,13 +69,55 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                         </li>
                     <?php } ?>
                     <?php
+                    if ($behance) {
+                    ?>
+                        <li class="hover-behance">
+                            <a href="<?php echo $behance; ?>" target="_blank">
+                                <?php
+                                smk_get_template_part(
+                                    'template-parts/iconos/behance.php',
+                                    array()
+                                );
+                                ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                    <?php
                     if ($linkedin) {
                     ?>
                         <li class="hover-linkedin">
                             <a href="<?php echo $linkedin; ?>" target="_blank">
                                 <?php
                                 smk_get_template_part(
-                                    'template-parts/iconos/facebook.php',
+                                    'template-parts/iconos/linkedin.php',
+                                    array()
+                                );
+                                ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                    <?php
+                    if ($artStation) {
+                    ?>
+                        <li class="hover-art">
+                            <a href="<?php echo $artStation; ?>" target="_blank">
+                                <?php
+                                smk_get_template_part(
+                                    'template-parts/iconos/art.php',
+                                    array()
+                                );
+                                ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                    <?php
+                    if ($youtube) {
+                    ?>
+                        <li class="hover-youtube">
+                            <a href="<?php echo $youtube; ?>" target="_blank">
+                                <?php
+                                smk_get_template_part(
+                                    'template-parts/iconos/youtube.php',
                                     array()
                                 );
                                 ?>

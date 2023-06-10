@@ -103,6 +103,12 @@ footer {
                 fill: #ffffff !important;
             }
         }
+        &.hover-art:hover{
+            background-color: $negro;
+            .bg{
+                fill: #13aff0;
+            }
+        }
         a {
             display: flex;
             transition: all 400ms;
