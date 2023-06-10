@@ -103,6 +103,29 @@ p,
   letter-spacing: normal;
 }
 
+.font-menu-title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 23.44px;
+  letter-spacing: normal;
+}
+
+.links-font-menu {
+  font-family: "Solway", serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.font-small-menu {
+  font-family: "Solway", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
 .text-limit {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -223,6 +246,16 @@ p,
 
 .btn-main.pink:hover, .btn-main.pink:focus {
   background-color: #EF5DA8;
+  color: #FFFFFF;
+}
+
+.btn-main.pink-two {
+  background-color: #EF5DA8;
+  color: #FFFFFF;
+}
+
+.btn-main.pink-two:hover, .btn-main.pink-two:focus {
+  background-color: #FCDDEC;
   color: #FFFFFF;
 }
 
@@ -468,31 +501,6 @@ nav .main-content {
   }
 }
 
-nav .logo-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .logo-content img {
-  display: block;
-  max-width: 60px;
-}
-
-nav .logo-content .title-logo {
-  color: #16312D;
-  margin-bottom: 0;
-}
-
-@media (max-width: 575.98px) {
-  nav .logo-content .title-logo {
-    font-size: 14px;
-  }
-}
-
 nav .d-flex-buttons {
   height: 46px;
   width: 46px;
@@ -618,6 +626,31 @@ nav .list-menu .link-menu:hover:after, nav .list-menu .link-menu:focus:after {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+
+.logo-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-content img {
+  display: block;
+  max-width: 60px;
+}
+
+.logo-content .title-logo {
+  color: #16312D;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  .logo-content .title-logo {
+    font-size: 14px;
+  }
 }
 
 .bloque-sobremi {
@@ -1133,5 +1166,100 @@ footer .text-copy {
     margin-left: auto;
     margin-right: 0;
   }
+}
+
+.modal-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(45.62%, rgba(252, 221, 236, 0.08)), color-stop(100%, rgba(255, 41, 151, 0.4)), color-stop(100%, rgba(255, 41, 151, 0.4)), to(rgba(255, 41, 151, 0.32))), #FCDDEC;
+  background: linear-gradient(180deg, rgba(252, 221, 236, 0.08) 45.62%, rgba(255, 41, 151, 0.4) 100%, rgba(255, 41, 151, 0.4) 100%, rgba(255, 41, 151, 0.32) 100%), #FCDDEC;
+  overflow-y: auto;
+}
+
+.modal-menu .header-menu {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.modal-menu .btn-close {
+  cursor: pointer;
+  height: 46px;
+  width: 46px;
+  background-color: #FFEBF7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-menu .title-modal {
+  color: #16312D;
+  margin-bottom: 2rem;
+}
+
+.modal-menu .space {
+  margin-bottom: 5.5rem;
+}
+
+.modal-menu .list-menu-modal {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.modal-menu .list-menu-modal li {
+  margin-bottom: 2rem;
+}
+
+.modal-menu .list-menu-modal a {
+  color: #16312D;
+}
+
+.modal-menu .title-socials {
+  color: #16312D;
+  margin-bottom: 2rem;
+}
+
+.modal-menu .li-animation {
+  opacity: 0;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+.modal-menu .opacityAnimation {
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

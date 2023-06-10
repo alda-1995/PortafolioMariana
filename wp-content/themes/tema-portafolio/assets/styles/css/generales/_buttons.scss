@@ -23,6 +23,14 @@
             color: $blanco;
         }
     }
+    &.pink-two{
+        background-color: $rosa;
+        color: $blanco;
+        &:hover, &:focus{
+            background-color: $rosaClaro;
+            color: $blanco;
+        }
+    }
     &:hover, &:focus{
         background-color: $verdeMedio;
         color: $blanco;

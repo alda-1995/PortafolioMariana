@@ -12,6 +12,23 @@ $(document).ready(function () {
 $('.openMenu').click(function (e) {
     e.preventDefault();
     $('.hamburger').addClass("is-active");
+    var tl = gsap.timeline();
+    tl.set("html", { "overflow-y": "hidden" });
+    tl.set(".modal-menu", { zIndex: 999 });
+    tl.to(".modal-menu", { x: 0, duration: 1, ease: 'expo.inOut' });
+    tl.to('.li-animation', { opacity: 1, y: 0, duration: 0.8, ease: 'expo.inOut', stagger: "0.02" }, "-=.5");
+    tl.to('.opacityAnimation', { opacity: 1, duration: 0.6 });
+});
+
+$('.closeMenu').click(function (e) {
+    e.preventDefault();
+    var tl = gsap.timeline();
+    tl.to('.li-animation', { y: "16px", opacity: 0, stagger: "0.04", duration: 0.3 });
+    tl.to('.opacityAnimation', { opacity: 0, duration: 0.3 });
+    tl.to(".modal-menu", { x: "100%", duration: 0.5, ease: 'expo.inOut' });
+    tl.set(".modal-menu", { zIndex: -1 });
+    tl.set("html", { "overflow-y": "auto" });
+    $('.hamburger').removeClass("is-active");
 });
 
 $('.link-category').click(function (e) {

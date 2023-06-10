@@ -14,22 +14,6 @@ nav {
             height: 90px;
         }
     }
-    .logo-content {
-        display: flex;
-        align-items: center;
-        img {
-            display: block;
-            max-width: 60px;
-        }
-        .title-logo {
-            color: $verdeOscuro;
-            margin-bottom: 0;
-            // `sm` applies to x-small devices (portrait phones, less than 576px)
-            @media (max-width: 575.98px) {
-                font-size: 14px;
-            }
-        }
-    }
 
     .d-flex-buttons {
         height: 46px;
@@ -124,6 +108,23 @@ nav {
                 transform: translateY(0px);
             }
             
+        }
+    }
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+    img {
+        display: block;
+        max-width: 60px;
+    }
+    .title-logo {
+        color: $verdeOscuro;
+        margin-bottom: 0;
+        // `sm` applies to x-small devices (portrait phones, less than 576px)
+        @media (max-width: 575.98px) {
+            font-size: 14px;
         }
     }
 }
