@@ -18,16 +18,16 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 </button>
             </div>
             <div class="d-flex flex-column align-items-center space">
-                <p class="font-menu-title title-modal">Menú</p>
+                <p class="font-menu-title title-modal li-animation">Menú</p>
                 <ul class="list-menu-modal">
                     <li>
-                        <a href="#" class="links-font-menu">Portafolio</a>
+                        <a href="#" data-id="portafolioBlock" class="links-font-menu link-movil-scroll li-animation">Portafolio</a>
                     </li>
                     <li>
-                        <a href="#" class="links-font-menu">Sobre mí</a>
+                        <a href="#" data-id="portafolioSobreMi" class="links-font-menu link-movil-scroll li-animation">Sobre mí</a>
                     </li>
                 </ul>
-                <a href="<?php echo get_the_permalink(40); ?>" class="btn-main pink-two links-font-menu">Contáctame</a>
+                <a href="<?php echo get_the_permalink(40); ?>" class="btn-main pink-two links-font-menu li-animation">Contáctame</a>
             </div>
             <?php
             if ($redes) {
@@ -36,8 +36,8 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 $instagram = $redes['instagram'];
                 $linkedin = $redes['linkedin'];
             ?>
-                <p class="title-socials font-small-menu">Redes sociales</p>
-                <ul class="list-socials">
+                <p class="title-socials font-small-menu opacityAnimation">Redes sociales</p>
+                <ul class="list-socials opacityAnimation">
                     <?php
                     if ($youtube) {
                     ?>

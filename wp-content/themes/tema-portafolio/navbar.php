@@ -14,10 +14,10 @@
             </button>
             <ul class="list-menu d-none d-md-flex">
                 <li>
-                    <a href="#" class="font-button link-menu">Portafolio</a>
+                    <a href="#" data-id="portafolioBlock" class="font-button link-menu link-menu-scroll">Portafolio</a>
                 </li>
                 <li>
-                    <a href="#" class="font-button link-menu">Sobre mí</a>
+                    <a href="#" data-id="portafolioSobreMi" class="font-button link-menu link-menu-scroll">Sobre mí</a>
                 </li>
                 <li>
                     <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button pink">Contáctame</a>

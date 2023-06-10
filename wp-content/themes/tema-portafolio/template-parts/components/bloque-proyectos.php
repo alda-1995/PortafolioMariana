@@ -1,4 +1,4 @@
-<div class="bloque-proyectos">
+<div class="bloque-proyectos" id="portafolioBlock">
     <div class="container">
         <h2 class="title-g mb-4">Portafolio</h2>
         <?php

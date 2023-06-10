@@ -1,4 +1,4 @@
-<div class="bloque-sobremi">
+<div class="bloque-sobremi" id="portafolioSobreMi">
     <div class="container">
         <div class="row align-items-md-center">
             <div class="col col-12 col-md-6 order-md-2">

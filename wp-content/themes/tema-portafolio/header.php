@@ -11,6 +11,8 @@
     <?php wp_head(); ?>
     <?php date_default_timezone_set("America/Mexico_City"); ?>
     <script>
+        var idPage = '<?php echo get_the_ID(); ?>';
+        var linkHome = '<?php echo get_the_permalink(8); ?>';
         var linkGracias = '<?php echo get_the_permalink(104); ?>';
     </script>
 

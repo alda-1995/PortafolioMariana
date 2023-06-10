@@ -7,7 +7,44 @@ let filtroProyecto = "";
 
 $(document).ready(function () {
     getPaginationProyectos();
+    const idContainer = $.urlParam('id');
+    if(idContainer){
+        scrollOrNavigate(idContainer);
+    }
 });
+
+$('.link-menu-scroll').click(function(e){
+    e.preventDefault();
+    var idBlock = $(this).attr("data-id");
+    scrollOrNavigate(idBlock);
+});
+
+$('.link-movil-scroll').click(function(e){
+    e.preventDefault();
+    var idBlock = $(this).attr("data-id");
+    scrollOrNavigateMenu(idBlock);
+});
+
+function scrollOrNavigate(idContainer){
+    if(idPage == 8){
+        $('html, body').animate({
+            scrollTop: (isMobil) ? $('#'+idContainer).offset().top - 80 : $('#'+idContainer).offset().top
+        }, 0);
+    }else{
+        location.href = linkHome + `?id=${idContainer}`;
+    }
+}
+
+function scrollOrNavigateMenu(idContainer){
+    if(idPage == 8){
+        closeMenu();
+        $('html, body').animate({
+            scrollTop: $('#'+idContainer).offset().top - 80
+        }, 0);
+    }else{
+        location.href = linkHome + `?id=${idContainer}`;
+    }
+}
 
 $('.openMenu').click(function (e) {
     e.preventDefault();
@@ -22,6 +59,10 @@ $('.openMenu').click(function (e) {
 
 $('.closeMenu').click(function (e) {
     e.preventDefault();
+    closeMenu();
+});
+
+function closeMenu(){
     var tl = gsap.timeline();
     tl.to('.li-animation', { y: "16px", opacity: 0, stagger: "0.04", duration: 0.3 });
     tl.to('.opacityAnimation', { opacity: 0, duration: 0.3 });
@@ -29,7 +70,7 @@ $('.closeMenu').click(function (e) {
     tl.set(".modal-menu", { zIndex: -1 });
     tl.set("html", { "overflow-y": "auto" });
     $('.hamburger').removeClass("is-active");
-});
+}
 
 $('.link-category').click(function (e) {
     e.preventDefault();
@@ -199,4 +240,13 @@ function getFormData($form) {
     });
 
     return indexed_array;
+}
+
+//obtiene valores de la url
+$.urlParam = function (name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results == null) {
+        return null;
+    }
+    return decodeURI(results[1]) || 0;
 }
