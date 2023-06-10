@@ -93,6 +93,15 @@ footer {
         }
         &.hover-linkedin:hover {
             background-color: #006699;
+            .bg {
+                fill: #006699 !important;
+            }
+        }
+        &.hover-behance:hover{
+            background-color: #053eff;
+            .bg {
+                fill: #ffffff !important;
+            }
         }
         a {
             display: flex;

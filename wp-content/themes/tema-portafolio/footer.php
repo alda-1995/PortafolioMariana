@@ -35,23 +35,11 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
             $facebook = $redes['facebook'];
             $instagram = $redes['instagram'];
             $linkedin = $redes['linkedin'];
+            $behance = $redes['behance'];
+            $artStation = $redes['art_station'];
         ?>
             <h3 class="mb-3 mt-4 title-socials">Sígueme en mis redes sociales</h3>
             <ul class="list-socials">
-                <?php 
-                if($youtube){
-                ?>
-                <li class="hover-youtube">
-                    <a href="<?php echo $youtube; ?>" target="_blank">
-                        <?php
-                        smk_get_template_part(
-                            'template-parts/iconos/youtube.php',
-                            array()
-                        );
-                        ?>
-                    </a>
-                </li>
-                <?php }?>
                 <?php 
                 if($facebook){
                 ?>
@@ -66,7 +54,7 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                     </a>
                 </li>
                 <?php }?>
-                <?php 
+                <?php
                 if($instagram){
                 ?>
                 <li class="hover-instagram">
@@ -80,6 +68,20 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                     </a>
                 </li>
                 <?php }?>
+                <?php
+                if($behance){
+                ?>
+                <li class="hover-behance">
+                    <a href="<?php echo $behance; ?>" target="_blank">
+                        <?php
+                        smk_get_template_part(
+                            'template-parts/iconos/behance.php',
+                            array()
+                        );
+                        ?>
+                    </a>
+                </li>
+                <?php }?>
                 <?php 
                 if($linkedin){
                 ?>
@@ -87,7 +89,21 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                     <a href="<?php echo $linkedin; ?>" target="_blank">
                         <?php
                         smk_get_template_part(
-                            'template-parts/iconos/facebook.php',
+                            'template-parts/iconos/linkedin.php',
+                            array()
+                        );
+                        ?>
+                    </a>
+                </li>
+                <?php }?>
+                <?php 
+                if($youtube){
+                ?>
+                <li class="hover-youtube">
+                    <a href="<?php echo $youtube; ?>" target="_blank">
+                        <?php
+                        smk_get_template_part(
+                            'template-parts/iconos/youtube.php',
                             array()
                         );
                         ?>

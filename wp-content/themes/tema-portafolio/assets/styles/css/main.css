@@ -811,6 +811,18 @@ footer .text-copy {
   background-color: #006699;
 }
 
+.list-socials li.hover-linkedin:hover .bg {
+  fill: #006699 !important;
+}
+
+.list-socials li.hover-behance:hover {
+  background-color: #053eff;
+}
+
+.list-socials li.hover-behance:hover .bg {
+  fill: #ffffff !important;
+}
+
 .list-socials li a {
   display: -webkit-box;
   display: -ms-flexbox;

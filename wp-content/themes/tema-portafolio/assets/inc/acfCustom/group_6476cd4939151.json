@@ -138,9 +138,25 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6476cdbe4b41e",
-                            "label": "Youtube",
-                            "name": "youtube",
+                            "key": "field_6485067ca02e7",
+                            "label": "Behance",
+                            "name": "behance",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_64850697a02e8",
+                            "label": "Art station",
+                            "name": "art_station",
                             "type": "url",
                             "instructions": "",
                             "required": 0,
@@ -170,6 +186,22 @@
                             "placeholder": ""
                         },
                         {
+                            "key": "field_6476cdeb4b421",
+                            "label": "Linkedin",
+                            "name": "linkedin",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_6476cddf4b420",
                             "label": "Instagram",
                             "name": "instagram",
@@ -186,9 +218,9 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_6476cdeb4b421",
-                            "label": "Linkedin",
-                            "name": "linkedin",
+                            "key": "field_6476cdbe4b41e",
+                            "label": "Youtube",
+                            "name": "youtube",
                             "type": "url",
                             "instructions": "",
                             "required": 0,
@@ -282,5 +314,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686115117
+    "modified": 1686439596
 }
