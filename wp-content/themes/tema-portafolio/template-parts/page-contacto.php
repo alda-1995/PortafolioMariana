@@ -30,15 +30,15 @@ $imgBig = get_field('imagen_grande');
         <?php
         if ($titulo) {
         ?>
-          <h2 class="title-contacto mb-3"><?php echo $titulo; ?></h2>
+          <h2 class="title-contacto mb-3 animacionTextOpacity target-animation-banner"><?php echo $titulo; ?></h2>
         <?php } ?>
         <?php
         if ($texto) {
         ?>
-          <h4 class="text-contacto mb-3"><?php echo $texto; ?></h4>
+          <h4 class="text-contacto mb-3 animacionTextOpacity target-animation-banner delay2"><?php echo $texto; ?></h4>
         <?php } ?>
         <div class="container-formulario">
-          <div class="form-c-principal">
+          <div class="form-c-principal animacionTextOpacity target-animation-banner">
             <form id="formularioContacto" name="formularioContacto" novalidate>
               <div class="form-input">
                 <input class="parrafo" type="text" name="nombre" placeholder="Nombre" required>

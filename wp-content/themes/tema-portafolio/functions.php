@@ -128,6 +128,8 @@
         wp_enqueue_script('Swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array(), '', 'jquery' );
         // GREENSOCK
         wp_enqueue_script('gsap', get_template_directory_uri() . '/assets/js/gsap.min.js', '', 'jquery');
+        // gsap scroll
+        wp_enqueue_script('gsap-scroll', get_template_directory_uri() . '/assets/js/ScrollTrigger.min.js', '', 'jquery');
         //main global js
         wp_enqueue_script('script', get_template_directory_uri() . "/assets/js/main.js", array(), '', 'jquery');
         wp_localize_script( 'script', 'aj_ajax', array(

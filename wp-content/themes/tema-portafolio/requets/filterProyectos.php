@@ -32,25 +32,33 @@ function filtraProyectos()
         }
 ?>
         <?php if ($articulos->have_posts()) : ?>
-            <?php while ($articulos->have_posts()) : $articulos->the_post(); ?>
+            <?php
+            $delay = 1;
+            while ($articulos->have_posts()) : $articulos->the_post(); ?>
                 <div class="col-6 col-md-4 col-lg-3 d-flex-me align-items-stretch">
-                    <a href="<?php echo get_the_permalink(); ?>" class="card-proyecto">
+                    <a href="<?php echo get_the_permalink(); ?>" class="card-proyecto target-card-filter animacionTextOpacity <?php echo "delay" . $delay; ?>"">
                         <?php
                         $imgUrl = get_the_post_thumbnail_url();
                         if ($imgUrl) {
                         ?>
-                            <div class="img-proyecto" style="background-image: url('<?php echo $imgUrl; ?>');"></div>
-                        <?php } ?>
-                        <p class="title-proyecto"><?php echo get_the_title(); ?></p>
-                    </a>
+                            <div class=" img-proyecto" style="background-image: url('<?php echo $imgUrl; ?>');">
                 </div>
-            <?php
+            <?php } ?>
+            <p class="title-proyecto"><?php echo get_the_title(); ?></p>
+            </a>
+            </div>
+        <?php
+                if ($delay < 4) {
+                    $delay++;
+                } else {
+                    $delay = 1;
+                }
             endwhile;
-            ?>
-        <?php else : ?>
-            <?php http_response_code(404); ?>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
+        ?>
+    <?php else : ?>
+        <?php http_response_code(404); ?>
+    <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
 <?php
     }
     die();

@@ -14,22 +14,26 @@
                         <?php
                         if ($this->titulo) {
                         ?>
-                            <h1 class="title mb-3"><?php echo $this->titulo; ?></h1>
+                            <h1 class="title mb-3 animacionTextOpacity target-animation-banner"><?php echo $this->titulo; ?></h1>
                         <?php } ?>
                         <?php
                         if ($this->texto) {
                         ?>
-                            <h4 class="subtitle mb-4"><?php echo $this->texto; ?></h4>
+                            <h4 class="subtitle mb-4 animacionTextOpacity target-animation-banner delay1"><?php echo $this->texto; ?></h4>
                         <?php } ?>
                         <?php
                         if (!empty($this->img)) {
                             $urlImg = $this->img['url'];
                         ?>
                             <div class="mb-4 d-lg-none">
-                                <img src="<?php echo $urlImg ?>" alt="banner mobile">
+                                <div class="animacionTextOpacity target-animation-banner delay3">
+                                    <img src="<?php echo $urlImg ?>" alt="banner mobile">
+                                </div>
                             </div>
                         <?php } ?>
-                        <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button">Contáctame</a>
+                        <div class="animacionTextOpacity target-animation-banner delay2">
+                            <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button">Contáctame</a>
+                        </div>
                     </div>
                 </div>
             </div>

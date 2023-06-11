@@ -6,7 +6,7 @@ $ArgProyectos = array(
 ?>
 <div class="bloque-proyectos-relacionados">
     <div class="container">
-        <h2 class="title-relacionados mb-4">Ver otros proyectos</h2>
+        <h2 class="title-relacionados mb-4 target-text-animation animacionTextOpacity">Ver otros proyectos</h2>
         <div class="row">
             <?php
             $numPostsMostrar = 4;
@@ -17,6 +17,7 @@ $ArgProyectos = array(
             );
             $the_query = new WP_Query($postSinle);
             $total = $the_query->post_count;
+            $delay = 1;
             if ($total >= 4) {
                 for ($i = $numPostsMostrar; $i > 0; $i--) {
                     $post = get_previous_post(); // this uses $post->ID
@@ -26,7 +27,7 @@ $ArgProyectos = array(
                         $idPost = get_the_ID();
                     ?>
                         <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-                            <a href="<?php echo get_the_permalink($idPost); ?>" class="card-proyecto">
+                            <a href="<?php echo get_the_permalink($idPost); ?>" class="card-proyecto target-text-animation animacionTextOpacity <?php echo "delay".$delay; ?>">
                                 <?php
                                 $imgUrl = get_the_post_thumbnail_url($idPost);
                                 if ($imgUrl) {
@@ -37,13 +38,18 @@ $ArgProyectos = array(
                             </a>
                         </div>
                         <?php
+                        if ($delay < 6) {
+                            $delay++;
+                        } else {
+                            $delay = 1;
+                        }
                     } else {
                         for ($j = 0; $j < $i; $j++) {
                             $twoPosts = get_posts($ArgProyectos);
                             $idPost = $twoPosts[$j]->ID;
                         ?>
                             <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-                                <a href="<?php echo get_the_permalink($idPost); ?>" class="card-proyecto">
+                                <a href="<?php echo get_the_permalink($idPost); ?>" class="card-proyecto target-text-animation animacionTextOpacity <?php echo "delay".$delay; ?>">
                                     <?php
                                     $imgUrl = get_the_post_thumbnail_url($idPost);
                                     if ($imgUrl) {
@@ -54,6 +60,11 @@ $ArgProyectos = array(
                                 </a>
                             </div>
                     <?php
+                            if ($delay < 6) {
+                                $delay++;
+                            } else {
+                                $delay = 1;
+                            }
                         }
                         break;
                     }

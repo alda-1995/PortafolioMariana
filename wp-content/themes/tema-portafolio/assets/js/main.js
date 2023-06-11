@@ -4,14 +4,33 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 var isMobilTabled = (jQuery(window).width() < 1024) ? true : false;
 var isMobil = window.matchMedia("only screen and (max-width: 760px)").matches;
 let filtroProyecto = "";
+gsap.registerPlugin(ScrollTrigger);
 
 $(document).ready(function () {
+    $('.target-animation-banner').addClass("is-view");
     getPaginationProyectos();
     const idContainer = $.urlParam('id');
     if(idContainer){
         scrollOrNavigate(idContainer);
     }
 });
+
+if ($('.target-text-animation').length > 0) {
+    $('.target-text-animation').each(function (index, value) {
+        var target = $(this);
+        ScrollTrigger.create({
+            trigger: value,
+            pin: false,
+            start: "top 80%",//creo el primero es donde esta indicador y el segundo desde se posicionara la pantalla que seria al principio
+            end: "top 80%",
+            markers: false,
+            pinSpacing: false,
+            onEnter: () => {
+                target.addClass("is-view");
+            }
+        });
+    });
+}
 
 $('.link-menu-scroll').click(function(e){
     e.preventDefault();
@@ -80,6 +99,25 @@ $('.link-category').click(function (e) {
     filtraProyectos(slug);
 });
 
+function addAnimationFilter(){
+    if ($('.target-card-filter').length > 0) {
+        $('.target-card-filter').each(function (index, value) {
+            var target = $(this);
+            ScrollTrigger.create({
+                trigger: value,
+                pin: false,
+                start: "top 80%",//creo el primero es donde esta indicador y el segundo desde se posicionara la pantalla que seria al principio
+                end: "top 80%",
+                markers: false,
+                pinSpacing: false,
+                onEnter: () => {
+                    target.addClass("is-view");
+                }
+            });
+        });
+    }
+}
+
 function filtraProyectos(filtro) {
     $('#proyectosContainer').empty();
     $('.loader-content').addClass("show-loader");
@@ -101,6 +139,7 @@ function ajaxProyectos() {
             $('.loader-content').removeClass("show-loader");
             $('#proyectosContainer').html(resp);
             getPaginationProyectos();
+            addAnimationFilter();
         },
         error: function (jqXHR, estado, error) {
             $('.loader-content').removeClass("show-loader");

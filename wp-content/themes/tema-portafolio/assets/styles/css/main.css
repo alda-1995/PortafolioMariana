@@ -418,6 +418,92 @@ p,
   color: #000000;
 }
 
+.animacionTextOpacity {
+  opacity: 0;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  -webkit-transition: opacity 0.7s cubic-bezier(0.34, 0.615, 0.4, 0.985), -webkit-transform 0.8s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+  transition: opacity 0.7s cubic-bezier(0.34, 0.615, 0.4, 0.985), -webkit-transform 0.8s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+  transition: opacity 0.7s cubic-bezier(0.34, 0.615, 0.4, 0.985), transform 0.8s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+  transition: opacity 0.7s cubic-bezier(0.34, 0.615, 0.4, 0.985), transform 0.8s cubic-bezier(0.34, 0.615, 0.4, 0.985), -webkit-transform 0.8s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+}
+
+.animacionTextOpacity.delay1 {
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.animacionTextOpacity.delay2 {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.animacionTextOpacity.delay3 {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.animacionTextOpacity.delay4 {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.animacionTextOpacity.delay5 {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.animacionTextOpacity.delay6 {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+.animacionTextOpacity.is-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.animationOpacity {
+  opacity: 0;
+  -webkit-transition: opacity 0.7s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+  transition: opacity 0.7s cubic-bezier(0.34, 0.615, 0.4, 0.985);
+}
+
+.animationOpacity.delay1 {
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.animationOpacity.delay2 {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.animationOpacity.delay3 {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.animationOpacity.delay4 {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.animationOpacity.delay5 {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.animationOpacity.delay6 {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+.animationOpacity.is-view {
+  opacity: 1;
+}
+
 .bloque-banner {
   width: 100%;
   background-color: #F5F5F5;
