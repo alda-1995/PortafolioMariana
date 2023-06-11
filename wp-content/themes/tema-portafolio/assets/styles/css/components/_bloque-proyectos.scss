@@ -71,6 +71,7 @@
     flex-grow: 1;
     align-items: center;
     margin-bottom: 1rem;
+    transition: all 400ms;
     .img-proyecto {
         height: 150px;
         width: 100%;
@@ -87,9 +88,16 @@
         color: $verdeOscuro;
         flex: 1 0 auto;
         margin-bottom: 0;
+        transition: all 400ms;
         // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) {
             padding: 0 1rem;
+        }
+    }
+    &:hover{
+        transform: scale(1.1);
+        .title-proyecto{
+            color: $rosa;
         }
     }
     // X-Large devices (large desktops, 1200px and up)

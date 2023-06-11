@@ -1036,6 +1036,8 @@ footer .text-copy {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 1rem;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 .card-proyecto .img-proyecto {
@@ -1059,12 +1061,23 @@ footer .text-copy {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   margin-bottom: 0;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 @media (min-width: 768px) {
   .card-proyecto .title-proyecto {
     padding: 0 1rem;
   }
+}
+
+.card-proyecto:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-proyecto:hover .title-proyecto {
+  color: #EF5DA8;
 }
 
 @media (min-width: 1200px) {
