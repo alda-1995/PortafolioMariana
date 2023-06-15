@@ -41,23 +41,23 @@ $imgBig = get_field('imagen_grande');
           <div class="form-c-principal animacionTextOpacity target-animation-banner">
             <form id="formularioContacto" name="formularioContacto" novalidate>
               <div class="form-input">
-                <input class="parrafo" type="text" name="nombre" placeholder="Nombre" required>
+                <input class="parrafo" type="text" name="nombre" placeholder="Name" required>
               </div>
               <div class="form-input">
-                <input class="parrafo" type="email" name="correo" placeholder="Correo" required>
+                <input class="parrafo" type="email" name="correo" placeholder="Email" required>
               </div>
               <div class="form-input">
-                <input class="parrafo phoneValidationMark" type="text" name="telefono" placeholder="Teléfono" required>
+                <input class="parrafo phoneValidationMark" type="text" name="telefono" placeholder="Phone" required>
               </div>
               <div class="form-input">
-                <textarea class="parrafo" name="mensaje" placeholder="Mensaje"></textarea>
+                <textarea class="parrafo" name="mensaje" placeholder="Message"></textarea>
               </div>
-              <button type="submit" class="btn-main font-button" id="btnContacto">Envíar</button>
+              <button type="submit" class="btn-main font-button" id="btnContacto">Send</button>
             </form>
           </div>
           <div class="message-error-contact">
-            <h4 class="text-contacto mb-3">Se genero un error al enviar. Vuelve a intentarlo.</h4>
-            <a href="#" class="btn-main font-button hide-error-contact">Volver a intentar</a>
+            <h4 class="text-contacto mb-3">An error was generated while sending. Retry.</h4>
+            <a href="#" class="btn-main font-button hide-error-contact">Try again</a>
           </div>
         </div>
       </div>

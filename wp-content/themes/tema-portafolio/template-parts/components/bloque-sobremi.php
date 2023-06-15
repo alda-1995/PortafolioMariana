@@ -13,10 +13,14 @@
                     ?>
                         <div class="mb-4 texto-wisyng animacionTextOpacity target-text-animation delay2"><?php echo $this->texto; ?></div>
                     <?php } ?>
-                    <div class="d-none d-md-block">
-                        <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button animacionTextOpacity target-text-animation delay3">Conocer más</a>
-                    </div>
+                    <?php
+                    if ($this->txtBtn) {
+                    ?>
+                        <div class="d-none d-md-block">
+                            <a href="#" class="btn-main font-button animacionTextOpacity target-text-animation delay3 txtShow"><?php echo $this->txtBtn; ?></a>
+                        </div>
                 </div>
+            <?php } ?>
             </div>
             <div class="col col-12 col-md-6 order-md-1">
                 <?php
@@ -28,14 +32,18 @@
                     </div>
                 <?php } ?>
             </div>
-            <div class="col col-12 d-md-none">
-                <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button w-full animacionTextOpacity target-text-animation delay3">Conocer más</a>
-            </div>
+            <?php
+            if ($this->txtBtn) {
+            ?>
+                <div class="col col-12 d-md-none">
+                    <a href="#" class="btn-main font-button w-full animacionTextOpacity target-text-animation delay3 txtShow"><?php echo $this->txtBtn; ?></a>
+                </div>
+            <?php } ?>
             <?php
             if ($this->texto2) {
             ?>
                 <div class="col col-12 col-md-10 col-lg-6 order-md-3">
-                    <div class="texto-wisyng mt-4 mt-xl-5 animacionTextOpacity target-text-animation delay2"><?php echo $this->texto2; ?></div>
+                    <div class="texto-wisyng mt-4 mt-xl-5 oculto" id="tgTexto"><?php echo $this->texto2; ?></div>
                 </div>
             <?php } ?>
         </div>

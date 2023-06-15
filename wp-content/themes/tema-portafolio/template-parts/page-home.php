@@ -34,7 +34,8 @@ smk_get_template_part(
     'img' => $bloqueAcerca['imagen'],
     'titulo' => $bloqueAcerca['titulo'],
     'texto' => $bloqueAcerca['texto'],
-    'texto2' => $bloqueAcerca['texto_2']
+    'texto2' => $bloqueAcerca['texto_2'],
+    'txtBtn' => $bloqueAcerca['texto_boton']
   )
 );
 ?>

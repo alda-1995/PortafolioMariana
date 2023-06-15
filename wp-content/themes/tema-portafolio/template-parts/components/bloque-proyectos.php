@@ -1,6 +1,6 @@
 <div class="bloque-proyectos" id="portafolioBlock">
     <div class="container">
-        <h2 class="title-g mb-4 animacionTextOpacity target-text-animation">Portafolio</h2>
+        <h2 class="title-g mb-4 animacionTextOpacity target-text-animation">Briefcase</h2>
         <?php
         $terms = get_terms(
             array(
@@ -13,7 +13,7 @@
         <div class="animacionTextOpacity target-text-animation">
             <div class="category-container">
                 <div class="flex-category">
-                    <a href="#" data-slug="all" class="link-category font-button active">Todos</a>
+                    <a href="#" data-slug="all" class="link-category font-button active">All</a>
                     <?php
                     foreach ($terms as $term) {
                         if ($term->parent == 0 && $term->name !== "Sin categoría") {

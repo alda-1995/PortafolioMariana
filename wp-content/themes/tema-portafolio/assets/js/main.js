@@ -32,6 +32,11 @@ if ($('.target-text-animation').length > 0) {
     });
 }
 
+$('.txtShow').click(function(e){
+    e.preventDefault();
+    $('#tgTexto').toggle();
+});
+
 $('.link-menu-scroll').click(function(e){
     e.preventDefault();
     var idBlock = $(this).attr("data-id");

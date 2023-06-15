@@ -1,5 +1,6 @@
 <?php
 $bloqueContacto = get_field('contacto', 'option');
+$tituloSocials = $bloqueContacto['titulo_redes_sociales'];
 $redes = $bloqueContacto['redes_sociales'];
 $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
 ?>
@@ -18,16 +19,16 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 </button>
             </div>
             <div class="d-flex flex-column align-items-center space">
-                <p class="font-menu-title title-modal li-animation">Menú</p>
+                <p class="font-menu-title title-modal li-animation">Menu</p>
                 <ul class="list-menu-modal">
                     <li>
-                        <a href="#" data-id="portafolioBlock" class="links-font-menu link-movil-scroll li-animation">Portafolio</a>
+                        <a href="#" data-id="portafolioBlock" class="links-font-menu link-movil-scroll li-animation">Briefcase</a>
                     </li>
                     <li>
-                        <a href="#" data-id="portafolioSobreMi" class="links-font-menu link-movil-scroll li-animation">Sobre mí</a>
+                        <a href="#" data-id="portafolioSobreMi" class="links-font-menu link-movil-scroll li-animation">About me</a>
                     </li>
                 </ul>
-                <a href="<?php echo get_the_permalink(40); ?>" class="btn-main pink-two links-font-menu li-animation">Contáctame</a>
+                <a href="<?php echo get_the_permalink(40); ?>" class="btn-main pink-two links-font-menu li-animation">Get in touch</a>
             </div>
             <?php
             if ($redes) {
@@ -38,7 +39,11 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 $behance = $redes['behance'];
                 $artStation = $redes['art_station'];
             ?>
-                <p class="title-socials font-small-menu opacityAnimation">Redes sociales</p>
+                <?php 
+                if($tituloSocials){
+                ?>
+                <p class="title-socials font-small-menu opacityAnimation"><?php echo $tituloSocials; ?></p>
+                <?php } ?>
                 <ul class="list-socials opacityAnimation">
                     <?php
                     if ($facebook) {

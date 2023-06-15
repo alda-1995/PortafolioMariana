@@ -4,6 +4,7 @@ $titulo = $bloquePie['titulo_pie'];
 $texto = $bloquePie['parrafo_pie'];
 $bloqueContacto = get_field('contacto', 'option');
 $correo = $bloqueContacto['correo_general'];
+$tituloSocials = $bloqueContacto['titulo_redes_sociales'];
 $redes = $bloqueContacto['redes_sociales'];
 $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
 ?>
@@ -38,7 +39,11 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
             $behance = $redes['behance'];
             $artStation = $redes['art_station'];
         ?>
-            <h3 class="mb-3 mt-4 title-socials">Sígueme en mis redes sociales</h3>
+            <?php 
+            if($tituloSocials){
+            ?>
+            <h3 class="mb-3 mt-4 title-socials"><?php echo $tituloSocials; ?></h3>
+            <?php }?>
             <ul class="list-socials">
                 <?php 
                 if($facebook){

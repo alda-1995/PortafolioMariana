@@ -2,7 +2,13 @@
     <div class="container">
         <div class="d-flex justify-content-between main-content align-items-center">
             <a href="<?php blog_url(); ?>" class="logo-content">
-                <img src="<?php theme_url(); ?>/assets/images/logo.png" alt="logo img">
+                <?php
+                $logo = get_field('logo', 'option');
+                if (!empty($logo)) {
+                    $urlLogo = $logo['url'];
+                ?>
+                    <img src="<?php echo $urlLogo; ?>" alt="logo img">
+                <?php } ?>
                 <h3 class="title-logo mx-3">Mariana Gutiérrez</h3>
             </a>
             <button class="d-flex-buttons openMenu d-md-none" type="button">
@@ -14,13 +20,13 @@
             </button>
             <ul class="list-menu d-none d-md-flex">
                 <li>
-                    <a href="#" data-id="portafolioBlock" class="font-button link-menu link-menu-scroll">Portafolio</a>
+                    <a href="#" data-id="portafolioBlock" class="font-button link-menu link-menu-scroll">Briefcase</a>
                 </li>
                 <li>
-                    <a href="#" data-id="portafolioSobreMi" class="font-button link-menu link-menu-scroll">Sobre mí</a>
+                    <a href="#" data-id="portafolioSobreMi" class="font-button link-menu link-menu-scroll">About me</a>
                 </li>
                 <li>
-                    <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button pink">Contáctame</a>
+                    <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button pink">Get in touch</a>
                 </li>
             </ul>
         </div>
