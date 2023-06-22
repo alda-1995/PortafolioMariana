@@ -32,7 +32,7 @@
                             </div>
                         <?php } ?>
                         <div class="animacionTextOpacity target-animation-banner delay2">
-                            <a href="<?php echo blog_url(); ?>" class="btn-main font-button">Regresar al inicio</a>
+                            <a href="<?php echo blog_url(); ?>" class="w-full btn-main font-button">Go to home</a>
                         </div>
                     </div>
                 </div>

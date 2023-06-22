@@ -86,7 +86,7 @@
                 <td style="padding: 0px 0 30px 0;">
                     <b>Nombre: </b><?php echo $_POST['nombre']; ?><br>
                     <b>Correo: </b><?php echo $_POST['correo']; ?><br>
-                    <b>Teléfono: </b><?php echo $_POST['telefono']; ?><br>
+                    <!-- <b>Teléfono: </b><?php echo $_POST['telefono']; ?><br> -->
                     <b>Mensaje: </b><?php echo $_POST['mensaje']; ?><br>
                 </td>
             </tr>

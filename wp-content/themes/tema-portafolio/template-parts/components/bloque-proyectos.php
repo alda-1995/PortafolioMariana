@@ -1,6 +1,6 @@
 <div class="bloque-proyectos" id="portafolioBlock">
     <div class="container">
-        <h2 class="title-g mb-4 animacionTextOpacity target-text-animation">Briefcase</h2>
+        <h2 class="title-g mb-4 animacionTextOpacity target-text-animation">Portfolio</h2>
         <?php
         $terms = get_terms(
             array(
@@ -71,7 +71,7 @@
                     <div class="loader"></div>
                 </div>
                 <div class="container-notResults">
-                    <h3 class="mb-0 title">No hay resultados disponibles.</h3>
+                    <h3 class="mb-0 title">No results available.</h3>
                 </div>
             </div>
             <div class="paginationProyectos pagination-js">

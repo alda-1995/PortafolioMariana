@@ -22,7 +22,7 @@ $numeroWhats = $bloqueContacto['numero_de_whatsapp'];
                 <p class="font-menu-title title-modal li-animation">Menu</p>
                 <ul class="list-menu-modal">
                     <li>
-                        <a href="#" data-id="portafolioBlock" class="links-font-menu link-movil-scroll li-animation">Briefcase</a>
+                        <a href="#" data-id="portafolioBlock" class="links-font-menu link-movil-scroll li-animation">Portfolio</a>
                     </li>
                     <li>
                         <a href="#" data-id="portafolioSobreMi" class="links-font-menu link-movil-scroll li-animation">About me</a>

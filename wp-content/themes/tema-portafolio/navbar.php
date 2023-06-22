@@ -20,7 +20,7 @@
             </button>
             <ul class="list-menu d-none d-md-flex">
                 <li>
-                    <a href="#" data-id="portafolioBlock" class="font-button link-menu link-menu-scroll">Briefcase</a>
+                    <a href="#" data-id="portafolioBlock" class="font-button link-menu link-menu-scroll">Portfolio</a>
                 </li>
                 <li>
                     <a href="#" data-id="portafolioSobreMi" class="font-button link-menu link-menu-scroll">About me</a>

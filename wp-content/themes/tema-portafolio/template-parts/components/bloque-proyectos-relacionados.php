@@ -6,7 +6,7 @@ $ArgProyectos = array(
 ?>
 <div class="bloque-proyectos-relacionados">
     <div class="container">
-        <h2 class="title-relacionados mb-4 target-text-animation animacionTextOpacity">Ver otros proyectos</h2>
+        <h2 class="title-relacionados mb-4 target-text-animation animacionTextOpacity">See other projects</h2>
         <div class="row">
             <?php
             $numPostsMostrar = 4;

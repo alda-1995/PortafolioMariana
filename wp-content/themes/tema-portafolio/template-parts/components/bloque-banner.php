@@ -32,7 +32,7 @@
                             </div>
                         <?php } ?>
                         <div class="animacionTextOpacity target-animation-banner delay2">
-                            <a href="<?php echo get_the_permalink(40); ?>" class="btn-main font-button">Get in touch</a>
+                            <a href="<?php echo get_the_permalink(40); ?>" class="w-full btn-main font-button">Get in touch</a>
                         </div>
                     </div>
                 </div>

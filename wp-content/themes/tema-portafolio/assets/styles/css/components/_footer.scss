@@ -1,21 +1,22 @@
 footer {
-    background: linear-gradient(
-            180deg,
-            rgba(252, 221, 236, 0.08) 45.62%,
-            rgba(255, 41, 151, 0.4) 100%,
-            rgba(255, 41, 151, 0.4) 100%,
-            rgba(255, 41, 151, 0.32) 100%
-        ),
-        #fcddec;
+    // background: linear-gradient(
+    //         180deg,
+    //         rgba(252, 221, 236, 0.08) 45.62%,
+    //         rgba(255, 41, 151, 0.4) 100%,
+    //         rgba(255, 41, 151, 0.4) 100%,
+    //         rgba(255, 41, 151, 0.32) 100%
+    //     ),
+    //     #fcddec;
+    background-color: $rosa;
     padding: 3rem 0;
     .title-footer {
-        color: $rosa;
+        color: $blanco;
     }
     .sub-footer {
-        color: $verdeOscuro;
+        color: $blanco;
     }
     .correo-footer {
-        color: $verdeOscuro;
+        color: $blanco;
     }
     .img-footer {
         width: 150px;
@@ -40,7 +41,7 @@ footer {
 }
 
 .title-socials {
-    color: $verdeOscuro;
+    color: $blanco;
     text-align: center;
 }
 

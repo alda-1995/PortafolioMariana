@@ -46,9 +46,9 @@ $imgBig = get_field('imagen_grande');
               <div class="form-input">
                 <input class="parrafo" type="email" name="correo" placeholder="Email" required>
               </div>
-              <div class="form-input">
+              <!-- <div class="form-input">
                 <input class="parrafo phoneValidationMark" type="text" name="telefono" placeholder="Phone" required>
-              </div>
+              </div> -->
               <div class="form-input">
                 <textarea class="parrafo" name="mensaje" placeholder="Message"></textarea>
               </div>

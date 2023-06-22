@@ -237,7 +237,7 @@
         $formulario = $_POST['formulario'];
         $nombre = ($formulario['nombre']) ? $formulario['nombre'] : "";
         $correoForm = ($formulario['correo']) ? $formulario['correo'] : "";
-        $telefono = ($formulario['telefono']) ? $formulario['telefono'] : "";
+        // $telefono = ($formulario['telefono']) ? $formulario['telefono'] : "";
         $mensaje = ($formulario['mensaje']) ? $formulario['mensaje'] : "";
         //correos remitentes
         $formularioContacto = get_field('contacto', 'option');
@@ -247,7 +247,7 @@
         $ch = curl_init();
         curl_setopt ($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, 'nombre='.$nombre.'&correo='.$correoForm.'&telefono='.$telefono.'&mensaje='.$mensaje);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'nombre='.$nombre.'&correo='.$correoForm.'&mensaje='.$mensaje);
         curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
         $contents = curl_exec($ch);

@@ -187,27 +187,27 @@ $("#formularioContacto").validate({
     // Specify validation rules
     rules: {
         nombre: "required",
-        telefono: {
-            required: true,
-            minlength: 14,
-            maxlength: 14
-        },
+        // telefono: {
+        //     required: true,
+        //     minlength: 14,
+        //     maxlength: 14
+        // },
         correo: {
             required: true,
             email: true
         },
     },
     messages: {
-        nombre: "El nombre es requerido",
+        nombre: "Name is required",
         correo: {
-            email: "El formato de correo no es válido",
-            required: 'El correo es requerido'
+            email: "Email format is invalid",
+            required: 'Email is required'
         },
-        telefono: {
-            required: "El teléfono es requerido",
-            minlength: "El teléfono es incorrecto",
-            maxlength: "El teléfono es incorrecto",
-        },
+        // telefono: {
+        //     required: "El teléfono es requerido",
+        //     minlength: "El teléfono es incorrecto",
+        //     maxlength: "El teléfono es incorrecto",
+        // },
     },
     errorPlacement: function (error, element) {
         error.insertAfter(element.parent());
