@@ -36,7 +36,7 @@ function filtraProyectos()
             $delay = 1;
             while ($articulos->have_posts()) : $articulos->the_post(); ?>
                 <div class="col-6 col-md-4 col-lg-3 d-flex-me align-items-stretch">
-                    <a href="<?php echo get_the_permalink(); ?>" class="card-proyecto target-card-filter animacionTextOpacity <?php echo "delay" . $delay; ?>"">
+                    <a href="<?php echo get_the_permalink(); ?>" class="card-proyecto target-card-filter animacionTextOpacity <?php echo "delay" . $delay; ?>">
                         <?php
                         $imgUrl = get_the_post_thumbnail_url();
                         if ($imgUrl) {
